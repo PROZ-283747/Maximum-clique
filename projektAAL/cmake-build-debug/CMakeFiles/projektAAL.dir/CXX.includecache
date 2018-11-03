@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+vector
+-
+fstream
+-
+string
+-
+iostream
+-
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp
+logic.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+iostream
+-
+graph.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+
