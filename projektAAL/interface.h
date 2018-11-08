@@ -19,7 +19,7 @@ public:
 
 private:
     Graph *myGraph;
-    Logic logic;
+    Logic *logic;
 };
 
 

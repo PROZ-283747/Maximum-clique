@@ -4,8 +4,16 @@
 
 #include "graph.h"
 
-Graph::Graph() : numberOfNodes(0) {
-    cout << "Constructor. Size: "<< adjacencyMatrix.size() <<endl;
+Graph::Graph() : numberOfNodes(5) {
+//    neighbours.push_back({1, 2});
+//    neighbours.push_back({0, 2});
+//    neighbours.push_back({0, 1, 3});
+//    neighbours.push_back({2});
+    neighbours.push_back({1, 2, 3});
+    neighbours.push_back({0, 2, 3});
+    neighbours.push_back({0, 1, 3});
+    neighbours.push_back({0, 1, 2});
+    neighbours.push_back({3});
 }
 
 Graph::~Graph() {}
@@ -20,24 +28,13 @@ void Graph::setNumberOfNodes(int numOfNodes)
     numberOfNodes = numOfNodes;
 }
 
-void Graph::setZerosToMarix() {
-    vector<int> tempVector;
-    for(int j=0; j<numberOfNodes; ++j){
-        tempVector.push_back(0);
-    }
-    for(int i=0; i<numberOfNodes; ++i){
-        adjacencyMatrix.push_back(tempVector);
-    }
-}
+//void Graph::setNeighbours() {
+//}
 
-void Graph::setAdjecencyMatrix(int first, int second) {
-    adjacencyMatrix[first][second] = 1;
-}
-
-void Graph::printAdjecencyMatrix(){
-    for(int i=0; i<numberOfNodes; ++i){
-        for(int j=0; j<numberOfNodes; ++j){
-            cout << adjacencyMatrix[i][j]<< " ";
+void Graph::printNeighbours(){
+    for(int i=0; i<neighbours.size(); ++i){
+        for(int j=0; j<neighbours[i].size(); ++j){
+            cout << neighbours[i][j]<< " ";
         }
         cout<<endl;
     }
@@ -47,10 +44,9 @@ void Graph::printNumberOfNodes() {
     cout<<"Number of nodes: "<< numberOfNodes <<endl;
 }
 
-const vector<vector<int>> &Graph::getAdjacencyMatrix() const {
-    return adjacencyMatrix;
+const vector<vector<int>> &Graph::getNeighbours() const {
+    return neighbours;
 }
 
-void Graph::setAdjacencyMatrix(const vector<vector<int>> &adjacencyMatrix) {
-    Graph::adjacencyMatrix = adjacencyMatrix;
-}
+
+

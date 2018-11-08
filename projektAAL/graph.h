@@ -15,23 +15,16 @@ using namespace std;
 class Graph {
 private:
     int numberOfNodes;
-    vector<vector<int>> adjacencyMatrix;
-public:
-    void setAdjacencyMatrix(const vector<vector<int>> &adjacencyMatrix);
-
-public:
-    const vector<vector<int>> &getAdjacencyMatrix() const;
-
+    vector<vector<int>> neighbours;
 public:
     Graph();
     ~Graph();
+    const vector<vector<int>> &getNeighbours() const;
     int getNumberOfNodes();
     void setNumberOfNodes(int numberOfNodes);
     void printNumberOfNodes();
-    void setZerosToMarix();
-    void setAdjecencyMatrix(int first, int second);
-    void printAdjecencyMatrix();
-
+//    void setNeighbours();
+    void printNeighbours();
 };
 
 

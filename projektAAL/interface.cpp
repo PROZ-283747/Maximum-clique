@@ -9,18 +9,19 @@ using namespace std;
 
 Interface::Interface() {
     myGraph = new Graph();
-    logic = Logic(myGraph);
+    logic = new Logic(myGraph);
 }
 
 Interface::~Interface() {
     delete myGraph;
+    delete logic;
 }
 
 void Interface::printOptions() {
     cout<<"This program can be used to find the biggest clique in a graph" <<endl;
     cout<<"\n************** MENU **************\n"
         <<"Choose one option to run program:\n"
-        <<"1 - Enter the graph from console\n"
+        <<"1 - Enter graph from console\n"
         <<"2 - Generate graph\n"
         <<"3 - Generate graph and do complex calculation\n" <<endl;
 }
@@ -31,8 +32,7 @@ void Interface::readGraphFromConsole() {
     std::cin >> numberOfNodes;
     myGraph->setNumberOfNodes(numberOfNodes);
     myGraph->printNumberOfNodes();
-    myGraph->setZerosToMarix();
-    myGraph->printAdjecencyMatrix();
+    myGraph->printNeighbours();
     cout<<endl<<"Enter edges: "<<endl;
     /*while(std::cin >> first >> second)
     {
@@ -40,9 +40,9 @@ void Interface::readGraphFromConsole() {
     }*/
     for(int i=0; i<7; ++i){
         std::cin >> first >> second;
-        myGraph->setAdjecencyMatrix(first, second);
+        //myGraph->setAdjecencyMatrix(first, second);
     }
-    myGraph->printAdjecencyMatrix();
+    myGraph->printNeighbours();
     cout<<"juz po"<<endl;
 }
 
@@ -55,10 +55,10 @@ void Interface::menu() {
         switch (choice) {
             case 1:
                 cout<<"case 1"<<endl;
-                readGraphFromConsole();
-                myGraph->printAdjecencyMatrix();
-                logic.addNodesToCandidatesList();
-                logic.findBiggestClique(myGraph, logic.getPartialResult(), logic.getNodesToConsider(), logic.getSkippedNodes());
+                //readGraphFromConsole();
+                cout<<"NEIGHBOURS: "<<endl;
+                myGraph->printNeighbours();
+                logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getSkippedNodes(), logic->getRmsize());
                 break;
             case 2:
                 cout<<"case 2"<<endl;
