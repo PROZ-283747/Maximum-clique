@@ -1,12 +1,9 @@
-//
-// Created by adell.j on 01.11.2018.
-//
-
+/* 11th November 2018
+ * Author: Adela Jaworowska
+ * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+ */
 #include "logic.h"
 
-Logic::Logic(){
-   cout<< "To bez parametrow. Ma sie nie wywolywac "<<endl;
-}
 
 Logic::Logic(Graph *graph) : rmsize(0) {
     cout<<"To ma sie wywolywac" << endl;
@@ -28,14 +25,6 @@ void Logic::assignVectorToVector(vector<int>* vect1, vector<int> vect2){
 }
 
 vector<int> Logic::productOfTwoVectors(vector<int> vect1, vector<int> vect2){
-//    vector<int> vector;
-//    for(int i=0; i<vect1.size(); ++i){
-//        for(int j=0; j<vect2.size(); ++j){
-//            if(vect1[i]==vect2[j])
-//                vector.push_back(vect1[i]);
-//        }
-//    }
-//    return vect1;
     vector<int> vector;
     for(int i=0; i<vect1.size(); ++i){
         if(isElementInVector(vect2, vect1[i]))
@@ -124,7 +113,6 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
                     ncmax = nc;
                 }
             }
-            //nodesToConsiderBisP.clear();
             nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
             cout<<"Nodes to consider Bis <- P: ";  printVector(nodesToConsiderBisP);
             for(int i=0; i < myGraph->getNeighbours()[v].size(); ++i) {
@@ -134,15 +122,11 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
             for(int i=0; i < nodesToConsiderBisP.size(); ++i) {
                 tempNodesN.clear();
 
-//                for(int j=0; j<myGraph->getNeighbours()[(nodesToConsiderBisP[i])].size(); ++j) {
-//                    tempNodesN.push_back(myGraph->getNeighbours()[(nodesToConsiderBisP[i])][j]);
-//                }
                   for(int j=0; j<myGraph->getNeighbours()[v].size(); ++j) {
                         tempNodesN.push_back(myGraph->getNeighbours()[v][j]);
                   }
                 cout<<"N z sasiadami: ";  printVector(tempNodesN);
                 partialResultPrimR.assign(partialResult.begin(), partialResult.end());
-                //partialResultPrimR.push_back(nodesToConsiderBisP[i]);
                 partialResultPrimR.push_back(v);
                 cout<<"R': ";  printVector(partialResultPrimR);
                 assignVectorToVector(&nodesToConsiderPrimP, productOfTwoVectors(nodesToConsider, tempNodesN));
@@ -160,15 +144,6 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
     }
 
 
-
-void Logic::addNodesToCandidatesList(){
-    cout<< "addNodesToCandidatesList"<<endl;
-    cout<< myGraph->getNumberOfNodes()<<endl;
-    for(int i=0; i< myGraph->getNumberOfNodes(); ++i){
-        cout<< "i: "<< i <<endl;
-        nodesToConsider.push_back(i);
-    }
-}
 
 const vector<int> &Logic::getNodesToConsider() const {
     return nodesToConsider;

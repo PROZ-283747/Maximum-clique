@@ -1,14 +1,20 @@
-//
-// Created by adell.j on 01.11.2018.
-//
+/* 11th November 2018
+ * Author: Adela Jaworowska
+ * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+ */
 
-#include <iostream>
+#include <sstream>
+#include <iterator>
 #include "interface.h"
 
 using namespace std;
 
-Interface::Interface() {
-    myGraph = new Graph();
+Interface::Interface(int argc,  char* argv[]) {
+    if(argc==2)
+        myGraph = new Graph(argv[1]);
+    else {
+        myGraph = new Graph(argv);
+    }
     logic = new Logic(myGraph);
 }
 
@@ -17,60 +23,39 @@ Interface::~Interface() {
     delete logic;
 }
 
-void Interface::printOptions() {
-    cout<<"This program can be used to find the biggest clique in a graph" <<endl;
-    cout<<"\n************** MENU **************\n"
-        <<"Choose one option to run program:\n"
-        <<"1 - Enter graph from console\n"
-        <<"2 - Generate graph\n"
-        <<"3 - Generate graph and do complex calculation\n" <<endl;
+void Interface::printWaysToRunProgram() {
+    cout<<"\nThis program can be used to find the biggest clique in a graph\n";
+    cout<<"To run it you need to enter: \n"
+        <<"1) program 1 graph.txt (if you want to read graph from file)\n"
+        <<"2) program 2 dataForGraphGenerator.txt (if you want to generate graph)\n"
+        <<"Specification for .txt files is in README\n\n"<<endl;
 }
-void Interface::readGraphFromConsole() {
-    cout<<"Enter number of nodes: ";
-    int numberOfNodes;
-    int first, second;
-    std::cin >> numberOfNodes;
-    myGraph->setNumberOfNodes(numberOfNodes);
-    myGraph->printNumberOfNodes();
-    myGraph->printNeighbours();
-    cout<<endl<<"Enter edges: "<<endl;
-    /*while(std::cin >> first >> second)
-    {
-        myGraph.setAdjecencyMatrix(first, second);
-    }*/
-    for(int i=0; i<7; ++i){
-        std::cin >> first >> second;
-        //myGraph->setAdjecencyMatrix(first, second);
+
+void Interface::menu(int argc, char* argv[]) {
+    if(argc == 1 ){
+        printWaysToRunProgram();
+        cout << "Incorrect number of arguments ! At least 1 needed." << endl;
     }
-    myGraph->printNeighbours();
-    cout<<"juz po"<<endl;
-}
-
-void Interface::menu() {
-    int choice = 0;
-
-    while(choice != 4){
-        printOptions();
-        cin >> choice;
-        switch (choice) {
-            case 1:
-                cout<<"case 1"<<endl;
-                //readGraphFromConsole();
-                cout<<"NEIGHBOURS: "<<endl;
-                myGraph->printNeighbours();
-                logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getSkippedNodes(), logic->getRmsize());
-                break;
-            case 2:
-                cout<<"case 2"<<endl;
-                break;
-            case 3:
-                cout<<"case 3"<<endl;
-                break;
-            case 4:
-                cout<<"case 4"<<endl;
-                return;
-            default:
-                break;
+    else {
+        cout << "argc: " << argc<<endl;
+        cout << "argv[1]: " << argv[1]<<endl;
+            switch (argc) {
+                case 2:
+                    cout << "case 1" << endl;
+                    myGraph->printNeighbours();
+                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(),logic->getSkippedNodes(), logic->getRmsize());
+                    break;
+                case 4:
+                    cout << "Generate graph" << endl;
+                    break;
+                case 5:
+                    cout << "Generate graph and do statistics" << endl;
+                    break;
+                default:
+                    cout<< "default: ";
+                    printWaysToRunProgram();
+                    break;
+            }
         }
     }
-}
+

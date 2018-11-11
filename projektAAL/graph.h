@@ -1,6 +1,7 @@
-//
-// Created by adell.j on 01.11.2018.
-//
+/* 11th November 2018
+ * Author: Adela Jaworowska
+ * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+ */
 
 #ifndef PROJEKTAAL_GRAPH_H
 #define PROJEKTAAL_GRAPH_H
@@ -16,14 +17,17 @@ class Graph {
 private:
     int numberOfNodes;
     vector<vector<int>> neighbours;
+    void readGraphFromFile(string fileName);
+    vector<int> changeStringVectorToInts(vector<string> strVect);
+
 public:
-    Graph();
+    Graph(string fileName);
+    Graph(char* argv[]);
     ~Graph();
     const vector<vector<int>> &getNeighbours() const;
-    int getNumberOfNodes();
+    int getNumberOfNodes() const;
     void setNumberOfNodes(int numberOfNodes);
-    void printNumberOfNodes();
-//    void setNeighbours();
+    void setNeighbours(vector<int> intVect);
     void printNeighbours();
 };
 

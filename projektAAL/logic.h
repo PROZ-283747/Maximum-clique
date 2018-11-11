@@ -1,18 +1,18 @@
-//
-// Created by adell.j on 01.11.2018.
-//
-
+/* 11th November 2018
+ * Author: Adela Jaworowska
+ * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+ */
 #ifndef PROJEKTAAL_LOGIC_H
 #define PROJEKTAAL_LOGIC_H
 #include <iostream>
 #include <algorithm>
 #include "graph.h"
 
+
 using namespace std;
 
 class Logic {
 public:
-    Logic();
     Logic(Graph *graph);
     ~Logic();
     int rmsize; // biggest clique's size
@@ -24,7 +24,6 @@ public:
     void setNodesToConsider(const vector<int> &nodesToConsider);
     void setSkippedNodes(const vector<int> &skippedNodes);
     void setPartialResult(const vector<int> &partialResult);
-    void addNodesToCandidatesList();
 
 private:
     Graph *myGraph;
@@ -32,7 +31,6 @@ private:
     vector<int> partialResult;
     vector<int> skippedNodes;
     void initializeNodesToConsiderVect();
-    //void addNodesToCandidatesList(Graph *graph, vector<int> vector);
     bool isElementInVector(vector<int> vector, int element);
     int findPositionOfElementInVector(vector<int> vector, int element);
     void removeElementFromVector(vector<int>* vector,  int element);
