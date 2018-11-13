@@ -21,7 +21,9 @@ public:
     const vector<int> &getPartialResult() const;
     const vector<int> &getSkippedNodes() const;
     const int &getRmsize() const;
-    void setNodesToConsider(const vector<int> &nodesToConsider);
+    void readGraphFromFile(string fileName);
+    vector<int> changeStringVectorToInts(vector<string> strVect);
+    void initializeNodesToConsiderVect(int numberOfNodes);
     void setSkippedNodes(const vector<int> &skippedNodes);
     void setPartialResult(const vector<int> &partialResult);
 
@@ -30,7 +32,6 @@ private:
     vector<int> nodesToConsider;
     vector<int> partialResult;
     vector<int> skippedNodes;
-    void initializeNodesToConsiderVect();
     bool isElementInVector(vector<int> vector, int element);
     int findPositionOfElementInVector(vector<int> vector, int element);
     void removeElementFromVector(vector<int>* vector,  int element);

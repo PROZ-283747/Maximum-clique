@@ -8,13 +8,17 @@
 
 #include <fstream>
 #include <iostream>
+#include <sstream>
+#include <iterator>
+#include <string>
 #include "logic.h"
 #include "graph.h"
+#include "graphGenerator.h"
 
 
 class Interface {
 public:
-    Interface(int argc, char* argv[]);
+    Interface();
     ~Interface();
     void menu(int argc, char* argv[]);
 
@@ -22,8 +26,8 @@ private:
     Graph *myGraph;
     Logic *logic;
     void printOptions();
+    int getMode(char* argv[]);
     void printWaysToRunProgram();
-
 };
 
 

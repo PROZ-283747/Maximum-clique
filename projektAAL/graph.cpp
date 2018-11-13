@@ -6,8 +6,8 @@
 #include <regex>
 #include "graph.h"
 
-//Graph::Graph() : numberOfNodes(0) {
-  //  cout<< "OMG znowu ten konstruktor." <<endl;
+Graph::Graph() : numberOfNodes(0) {
+    cout<< "OMG znowu ten konstruktor." <<endl;
 //    neighbours.push_back({1, 2});
 //    neighbours.push_back({0, 2});
 //    neighbours.push_back({0, 1, 3});
@@ -38,14 +38,6 @@
 //    neighbours.push_back({3, 4, 7});
 //    neighbours.push_back({6, 3, 4, 1, 2, 5});
 //    neighbours.push_back({});
-//}
-
-Graph::Graph(string fileName) {
-    readGraphFromFile(fileName);
-}
-
-Graph::Graph(char* argv[]) {
-    // generateGraph();
 }
 
 Graph::~Graph() {}
@@ -60,6 +52,7 @@ void Graph::setNeighbours(vector<int> intVect){
 }
 
 void Graph::printNeighbours(){
+    cout<<"Print neighbours"<<endl;
     for(int i=0; i<neighbours.size(); ++i){
         for(int j=0; j<neighbours[i].size(); ++j){
             cout << neighbours[i][j]<< " ";
@@ -72,44 +65,15 @@ const vector<vector<int>> &Graph::getNeighbours() const {
     return neighbours;
 }
 
-vector<int> Graph::changeStringVectorToInts(vector<string> strVect){
-    vector<int> intVect;
-    for(int i=0; i< strVect.size(); ++i){
-        intVect.push_back(stoi(strVect[i]));
-    }
-    return intVect;
-}
-
 int Graph::getNumberOfNodes() const {
     return numberOfNodes;
 }
 
-void Graph::readGraphFromFile(string fileName) {
-    cout << "Read graph form console"<<endl;
-    int numOfNodes=0;
-    string neighboursOfOneNode;
-
-    ifstream file;
-    file.open("../" + fileName, ios::out);
-
-    if(file) {
-        file >> numOfNodes;
-        setNumberOfNodes(numOfNodes);
-        cout << "NumN: " << numOfNodes << endl;
-        std::getline( file, neighboursOfOneNode ); // reads line with number of nodes
-        while( !file.eof() ) /* Dopóki kursor nie znajdzie sie na koncu EOF - 'EndOfFile' */
-        {
-            for(int i=0; i <  numOfNodes; ++i) {
-                std::getline(file, neighboursOfOneNode); /* Funkcja getline wczytuje caly wiersz do stringa */
-                istringstream iss(neighboursOfOneNode);
-                vector<string> neighbours((istream_iterator<string>(iss)), istream_iterator<string>());
-                setNeighbours(changeStringVectorToInts(neighbours));
-            }
-        }
+void Graph::setGraph(pair<int , vector<vector<int>>> graphParams){
+    numberOfNodes = graphParams.first;
+    for(int i=0; i<numberOfNodes; ++i){
+        cout<<"vhjmfhgfgb"<<endl;
+        neighbours[i].assign(graphParams.second[i].begin(), graphParams.second[i].end());
     }
-    else{
-        cout<<"Opening file failed."<<endl;
-        return;
-    }
-    file.close();
 }
+

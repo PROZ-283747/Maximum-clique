@@ -2,6 +2,7 @@
  * Author: Adela Jaworowska
  * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
  */
+#include <regex>
 #include "logic.h"
 
 
@@ -10,13 +11,13 @@ Logic::Logic(Graph *graph) : rmsize(0) {
     myGraph = graph;
     partialResult.clear();
     skippedNodes.clear();
-    initializeNodesToConsiderVect();
+    nodesToConsider.clear();
 }
 
 Logic::~Logic() {}
 
-void Logic::initializeNodesToConsiderVect(){
-    for(int i = 0; i < myGraph->getNumberOfNodes() ; ++i){
+void Logic::initializeNodesToConsiderVect(int numberOfNodes){
+    for(int i=0; i< numberOfNodes; ++i){
         nodesToConsider.push_back(i);
     }
 };
@@ -57,6 +58,44 @@ void Logic::printVector(vector<int> vector){
         cout<< vector[i] << " ";
     }
     cout<<endl;
+}
+
+vector<int> Logic::changeStringVectorToInts(vector<string> strVect){
+    vector<int> intVect;
+    for(int i=0; i< strVect.size(); ++i){
+        intVect.push_back(stoi(strVect[i]));
+    }
+    return intVect;
+}
+
+void Logic::readGraphFromFile(string fileName) {
+    cout << "Read graph form console"<<endl;
+    int numOfNodes=0;
+    string neighboursOfOneNode;
+
+    ifstream file;
+    file.open("../" + fileName, ios::out);
+
+    if(file) {
+        file >> numOfNodes;
+        myGraph->setNumberOfNodes(numOfNodes);
+        cout << "NumN: " << numOfNodes << endl;
+        std::getline( file, neighboursOfOneNode ); // reads line with number of nodes
+        while( !file.eof() ) /* Dopóki kursor nie znajdzie sie na koncu EOF - 'EndOfFile' */
+        {
+            for(int i=0; i <  numOfNodes; ++i) {
+                std::getline(file, neighboursOfOneNode); /* Funkcja getline wczytuje caly wiersz do stringa */
+                istringstream iss(neighboursOfOneNode);
+                vector<string> neighbours((istream_iterator<string>(iss)), istream_iterator<string>());
+                myGraph->setNeighbours(changeStringVectorToInts(neighbours));
+            }
+        }
+    }
+    else{
+        cout<<"Opening file failed."<<endl;
+        return;
+    }
+    file.close();
 }
 
 vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider, vector<int> skippedNodes, int rmsize){
@@ -144,7 +183,6 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
     }
 
 
-
 const vector<int> &Logic::getNodesToConsider() const {
     return nodesToConsider;
 }
@@ -169,7 +207,5 @@ void Logic::setSkippedNodes(const vector<int> &skippedNodes) {
     Logic::skippedNodes = skippedNodes;
 }
 
-void Logic::setNodesToConsider(const vector<int> &nodesToConsider) {
-    Logic::nodesToConsider = nodesToConsider;
-}
+
 

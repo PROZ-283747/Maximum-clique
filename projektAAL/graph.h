@@ -17,17 +17,16 @@ class Graph {
 private:
     int numberOfNodes;
     vector<vector<int>> neighbours;
-    void readGraphFromFile(string fileName);
-    vector<int> changeStringVectorToInts(vector<string> strVect);
+
 
 public:
-    Graph(string fileName);
-    Graph(char* argv[]);
+    Graph();
     ~Graph();
     const vector<vector<int>> &getNeighbours() const;
     int getNumberOfNodes() const;
     void setNumberOfNodes(int numberOfNodes);
     void setNeighbours(vector<int> intVect);
+    void setGraph(pair<int , vector<vector<int>>> graphParams);
     void printNeighbours();
 };
 
