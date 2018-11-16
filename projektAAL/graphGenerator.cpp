@@ -121,11 +121,13 @@ pair<int, vector<vector<int>>> GraphGenerator::generateGraph(){
     }
 
     saveGraphToFile("../genGraph.txt", neighbours);
+    cout<<"**************"<<endl;
     for(int i=0; i<neighbours.size(); ++i){
         for(int j=0; j<neighbours[i].size(); ++j){
             cout << neighbours[i][j]<< " ";
         }
         cout<<endl;
     }
+    graphParams.second = neighbours;
     return graphParams;
 }
