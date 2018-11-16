@@ -98,7 +98,7 @@ void Logic::readGraphFromFile(string fileName) {
     file.close();
 }
 
-vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider, vector<int> skippedNodes, int rmsize){
+vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider, int rmsize){
     cout<<"Find biggest clique"<<endl;
     cout<<"Nodes to consider: "; printVector(nodesToConsider);
     cout<<"Partial result: "; printVector(partialResult);
@@ -107,12 +107,12 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
     vector<int> nodesToConsiderPrimP;
     vector<int> nodesToConsiderBisP;
     vector<int> partialResultPrimR;
-    vector<int> skippedNodesPrimX;
+    //vector<int> skippedNodesPrimX;
     vector<int> tempNodesN;
     vector<int> biggestCliqueRM;
     int u=0, v=0, w=0, ncmax=0, nc=0, rms=0;
 
-    if(nodesToConsider.empty() && skippedNodes.empty()){
+    if(nodesToConsider.empty()){//&& skippedNodes.empty()){
         rms = partialResult.size();
         if(rms > rmsize){
             biggestCliqueRM.assign(partialResult.begin(), partialResult.end());
@@ -148,7 +148,7 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
                         nc++;
                 }}
                 if(nc >= ncmax){
-                    v = u;
+                    v = u;   // piwot
                     ncmax = nc;
                 }
             }
@@ -157,29 +157,35 @@ vector<int> Logic::findBiggestClique(Graph *graph, vector<int> partialResult, ve
             for(int i=0; i < myGraph->getNeighbours()[v].size(); ++i) {
                 removeElementFromVector(&nodesToConsiderBisP, myGraph->getNeighbours()[v][i]);
             }
+            cout<<"v: "<< v<<endl;
             cout<<"Nodes to consider Bis bez sasiadow: ";  printVector(nodesToConsiderBisP);
-            for(int i=0; i < nodesToConsiderBisP.size(); ++i) {
                 tempNodesN.clear();
 
                   for(int j=0; j<myGraph->getNeighbours()[v].size(); ++j) {
                         tempNodesN.push_back(myGraph->getNeighbours()[v][j]);
                   }
-                cout<<"N z sasiadami: ";  printVector(tempNodesN);
+                    cout<<"N z sasiadami: ";  printVector(tempNodesN);
                 partialResultPrimR.assign(partialResult.begin(), partialResult.end());
                 partialResultPrimR.push_back(v);
-                cout<<"R': ";  printVector(partialResultPrimR);
+                    cout<<"R': ";  printVector(partialResultPrimR);
                 assignVectorToVector(&nodesToConsiderPrimP, productOfTwoVectors(nodesToConsider, tempNodesN));
-                cout<<"P n N : ";  printVector(productOfTwoVectors(nodesToConsider, tempNodesN));
-                cout<<"P': ";  printVector(nodesToConsiderPrimP);
-                assignVectorToVector(&skippedNodesPrimX, productOfTwoVectors(skippedNodes, tempNodesN));
-                cout<<"X n N : ";  printVector(productOfTwoVectors(skippedNodes, tempNodesN));
-                cout<<"X': ";  printVector(skippedNodesPrimX);
+                    cout<<"P n N : ";  printVector(productOfTwoVectors(nodesToConsider, tempNodesN));
+                    cout<<"P': ";  printVector(nodesToConsiderPrimP);
+                    //assignVectorToVector(&skippedNodesPrimX, productOfTwoVectors(skippedNodes, tempNodesN));
+                    cout<<"X n N : ";  printVector(productOfTwoVectors(skippedNodes, tempNodesN));
+                    //cout<<"X': ";  printVector(skippedNodesPrimX);
 
-                findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP, skippedNodesPrimX, rmsize);
+                    //findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP, skippedNodesPrimX, rmsize);
+                    cout<<"Partial: "; printVector(partialResult); cout<<endl;
+                    cout<<"N T C: "; printVector(nodesToConsider); cout<<endl;
+
+                findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP, rmsize);
             }
-            removeElementFromVector(&nodesToConsider,  v);
-            partialResult.push_back(v);
-        }
+            cout<<"GMREKNGLKSNGK"<<endl;
+            removeElementFromVector(&nodesToConsider,  v);  // P
+            partialResult.push_back(v);                     // R
+            cout<<"Partial: "; printVector(partialResult); cout<<endl;
+            cout<<"N T C: "; printVector(nodesToConsider); cout<<endl;
     }
 
 

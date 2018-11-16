@@ -16,7 +16,7 @@ public:
     Logic(Graph *graph);
     ~Logic();
     int rmsize; // biggest clique's size
-    vector<int> findBiggestClique(Graph *graph, vector<int> nodesToConsider, vector<int> partialResult, vector<int> skippedNodes, int rmsize);
+    vector<int> findBiggestClique(Graph *graph, vector<int> nodesToConsider, vector<int> partialResult, int rmsize);
     const vector<int> &getNodesToConsider() const;
     const vector<int> &getPartialResult() const;
     const vector<int> &getSkippedNodes() const;

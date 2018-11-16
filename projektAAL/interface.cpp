@@ -29,7 +29,7 @@ void Interface::printWaysToRunProgram() {
 int Interface::getMode(char* argv[]){
     char *ch = argv[1];
     cout<< "Get mode"<<ch[2]<<endl;
-    return ch[2];
+    return ch[2]-48;
 }
 
 void Interface::menu(int argc, char* argv[]) {
@@ -38,7 +38,7 @@ void Interface::menu(int argc, char* argv[]) {
         printWaysToRunProgram();
     }
         cout << "argc: " << argc<<endl;
-        int choice = getMode(argv)-48;
+        int choice = getMode(argv);
         cout<< "choice" << choice<<endl;
             switch (choice) {
                 case 1:
@@ -46,7 +46,7 @@ void Interface::menu(int argc, char* argv[]) {
                     logic->readGraphFromFile(argv[2]);
                     myGraph->printNeighbours();
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
-                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(),logic->getSkippedNodes(), logic->getRmsize());
+                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getRmsize());
                     break;
                 case 2:
                     cout << "case 2" << endl;
@@ -57,7 +57,7 @@ void Interface::menu(int argc, char* argv[]) {
                     myGraph->printNeighbours();
                     cout<<"****"<<endl;
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
-                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(),logic->getSkippedNodes(), logic->getRmsize());
+                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getRmsize());
                     break;
                 case 3:
                     cout << "case 3" << endl;

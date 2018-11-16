@@ -8,6 +8,7 @@ CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.cpp
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.h
 
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../graph.h
+CMakeFiles/projektAAL.dir/interface.cpp.obj: ../graphGenerator.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../interface.cpp
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../interface.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../logic.h
@@ -17,6 +18,7 @@ CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.cpp
 CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.h
 
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../graph.h
+CMakeFiles/projektAAL.dir/main.cpp.obj: ../graphGenerator.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../interface.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../logic.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../main.cpp
