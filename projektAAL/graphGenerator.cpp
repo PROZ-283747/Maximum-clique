@@ -41,7 +41,7 @@ void GraphGenerator::saveGraphToFile(string fileName, vector<vector<int>> graph)
                 else
                     outputFile << graph[i][j] << " ";
             }
-            if(i<numberOfNodes-1) //There cannot be a new line behind neighbours of the last node ina graph.
+            if(i<numberOfNodes-1) //There cannot be a new line behind neighbours of the last node in a graph.
                 outputFile << "\n";
         }
     }

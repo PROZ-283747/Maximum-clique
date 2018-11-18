@@ -46,18 +46,18 @@ void Interface::menu(int argc, char* argv[]) {
                     logic->readGraphFromFile(argv[2]);
                     myGraph->printNeighbours();
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
-                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getRmsize());
+                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
                     break;
                 case 2:
                     cout << "case 2" << endl;
                     GraphGenerator *graphGenerator;
-                    graphGenerator = new GraphGenerator(5, 5, 2);
+                    graphGenerator = new GraphGenerator(10, 15, 5);
                     myGraph->setGraph(graphGenerator->generateGraph());
                     cout<<"**"<< myGraph->getNumberOfNodes()<<"**"<<endl;
                     myGraph->printNeighbours();
                     cout<<"****"<<endl;
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
-                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider(), logic->getRmsize());
+                    logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
                     break;
                 case 3:
                     cout << "case 3" << endl;

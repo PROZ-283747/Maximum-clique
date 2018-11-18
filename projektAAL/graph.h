@@ -18,7 +18,6 @@ private:
     int numberOfNodes;
     vector<vector<int>> neighbours;
 
-
 public:
     Graph();
     ~Graph();

@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.cpp
+regex
+-
+graph.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+
 F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
 vector
 -
@@ -15,6 +21,48 @@ string
 -
 iostream
 -
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.cpp
+algorithm
+-
+fstream
+-
+iostream
+-
+graphGenerator.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
+vector
+-
+cstdlib
+-
+time.h
+-
+string
+-
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.cpp
+interface.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.h
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.h
+fstream
+-
+iostream
+-
+sstream
+-
+iterator
+-
+string
+-
+logic.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+graph.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+graphGenerator.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
 
 F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp
 regex
@@ -29,4 +77,14 @@ algorithm
 -
 graph.h
 F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/main.cpp
+interface.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.h
+fstream
+-
+string
+-
+iostream
+-
 

@@ -73,7 +73,6 @@ void Graph::setGraph(pair<int , vector<vector<int>>> graphParams){
     numberOfNodes = graphParams.first;
     for(int i=0; i<numberOfNodes; ++i){
         cout<<"vhjmfhgfgb"<<endl;
-        //neighbours[i].assign(graphParams.second[i].begin(), graphParams.second[i].end());
         neighbours.push_back(graphParams.second[i]);
         cout<<"vhjmfhgfgb"<<endl;
     }
