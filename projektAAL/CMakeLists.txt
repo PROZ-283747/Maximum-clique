@@ -3,4 +3,4 @@ project(projektAAL)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(projektAAL main.cpp graphGenerator.cpp graphGenerator.h graph.cpp graph.h interface.cpp interface.h logic.cpp logic.h)
+add_executable(projektAAL main.cpp graphGenerator.cpp graphGenerator.h graph.cpp graph.h interface.cpp interface.h logic.cpp logic.h fileManager.cpp fileManager.h)

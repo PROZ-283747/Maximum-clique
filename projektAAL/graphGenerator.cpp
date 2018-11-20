@@ -14,7 +14,6 @@ GraphGenerator::GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique
 };
 
 vector<int> GraphGenerator::generateNumbersWithoutRepetition(int number, int upperRange){
-    srand( time( NULL ) );
     vector<int> vector;
     while(vector.size() < number){
         int random =( rand() % upperRange );
@@ -25,29 +24,6 @@ vector<int> GraphGenerator::generateNumbersWithoutRepetition(int number, int upp
             vector.push_back(random);
     }
     return vector;
-}
-
-void GraphGenerator::saveGraphToFile(string fileName, vector<vector<int>> graph){
-    ofstream outputFile;
-    outputFile.open(fileName, ios::out| ios::trunc);
-    if (outputFile.is_open())
-    {
-        outputFile << numberOfNodes;
-        outputFile << "\n";
-        for(int i=0; i< numberOfNodes; ++i){
-            for(int j=0; j< graph[i].size(); ++j) {
-                if(j== graph[i].size()-1)
-                    outputFile << graph[i][j]; // There cannot be any white char behind the last node(neighbour) in a line.
-                else
-                    outputFile << graph[i][j] << " ";
-            }
-            if(i<numberOfNodes-1) //There cannot be a new line behind neighbours of the last node in a graph.
-                outputFile << "\n";
-        }
-    }
-    else
-        cout << "Saving to file failed.";
-    outputFile.close();
 }
 
 bool GraphGenerator::isElementInVector(vector<int> vector, int element){
@@ -64,7 +40,7 @@ pair<int, int> GraphGenerator::generateVertice(vector<vector<int>> neighbours){
         vertice.first = vert1;
         vertice.second = vert2;
     }while(verticeExists(vertice, neighbours) || vert1 == vert2);
-    cout<<"Vertice: "<< vertice.first << " "<< vertice.second<<endl;
+    //cout<<"Vertice: "<< vertice.first << " "<< vertice.second<<endl;
     return vertice;
 }
 
@@ -105,29 +81,14 @@ pair<int, vector<vector<int>>> GraphGenerator::generateGraph(){
     graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
     vector<int> biggestClique = generateNumbersWithoutRepetition(sizeOfBiggestClique, numberOfNodes);
     setCliqueToGraph(biggestClique, &neighbours);
-    for(int j=0; j<biggestClique.size(); ++j){
-        cout << "Q: " << biggestClique[j]<<endl;
-    }
+//    for(int j=0; j<biggestClique.size(); ++j){
+//        cout << "Q: " << biggestClique[j]<<endl;
+//    }
     int numOfVerticesToAdd = numberOfEdges - (sizeOfBiggestClique*(sizeOfBiggestClique -1))/2;
     for(int i=0; i < numOfVerticesToAdd; ++i){
         setVerticeToGraph(generateVertice(neighbours), &neighbours);
-        cout<<"**********"<<endl;
-        for(int i=0; i<neighbours.size(); ++i){
-            for(int j=0; j<neighbours[i].size(); ++j){
-                cout << neighbours[i][j]<< " ";
-            }
-            cout<<endl;
-        }
     }
-
-    saveGraphToFile("../genGraph.txt", neighbours);
-    cout<<"**************"<<endl;
-    for(int i=0; i<neighbours.size(); ++i){
-        for(int j=0; j<neighbours[i].size(); ++j){
-            cout << neighbours[i][j]<< " ";
-        }
-        cout<<endl;
-    }
+    fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
     graphParams.second = neighbours;
     return graphParams;
 }

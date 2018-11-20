@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.cpp">
+			<Option target="projektAAL"/>
+		</Unit>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.h">
+			<Option target="projektAAL"/>
+		</Unit>
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.cpp">
 			<Option target="projektAAL"/>
 		</Unit>

@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <time.h>
 #include <string>
+#include "fileManager.h"
 
 using namespace std;
 
@@ -18,6 +19,7 @@ private:
     int numberOfNodes;
     int numberOfEdges;
     int sizeOfBiggestClique;
+    FileManager *fileManager;
     vector<int> generateNumbersWithoutRepetition(int number, int upperRange);
     void saveGraphToFile(string fileName, vector<vector<int>> graph);
     pair<int, int> generateVertice(vector<vector<int>> neighbours);

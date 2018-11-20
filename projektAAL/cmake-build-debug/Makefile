@@ -122,6 +122,33 @@ projektAAL/fast:
 	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/build
 .PHONY : projektAAL/fast
 
+fileManager.obj: fileManager.cpp.obj
+
+.PHONY : fileManager.obj
+
+# target to build an object file
+fileManager.cpp.obj:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/fileManager.cpp.obj
+.PHONY : fileManager.cpp.obj
+
+fileManager.i: fileManager.cpp.i
+
+.PHONY : fileManager.i
+
+# target to preprocess a source file
+fileManager.cpp.i:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/fileManager.cpp.i
+.PHONY : fileManager.cpp.i
+
+fileManager.s: fileManager.cpp.s
+
+.PHONY : fileManager.s
+
+# target to generate assembly for a file
+fileManager.cpp.s:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/fileManager.cpp.s
+.PHONY : fileManager.cpp.s
+
 graph.obj: graph.cpp.obj
 
 .PHONY : graph.obj
@@ -266,6 +293,9 @@ help:
 	@echo ... edit_cache
 	@echo ... projektAAL
 	@echo ... rebuild_cache
+	@echo ... fileManager.obj
+	@echo ... fileManager.i
+	@echo ... fileManager.s
 	@echo ... graph.obj
 	@echo ... graph.i
 	@echo ... graph.s

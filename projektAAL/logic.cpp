@@ -6,7 +6,7 @@
 #include "logic.h"
 
 
-Logic::Logic(Graph *graph) : rmsize(0) {
+Logic::Logic(Graph *graph) : maximalCliqueSize(0) {
     cout<<"To ma sie wywolywac" << endl;
     myGraph = graph;
     partialResult.clear();
@@ -20,7 +20,10 @@ void Logic::initializeNodesToConsiderVect(int numberOfNodes){
     for(int i=0; i< numberOfNodes; ++i){
         nodesToConsider.push_back(i);
     }
-};
+    maximalClique.clear();
+    maximalCliqueSize =0;
+}
+
 void Logic::assignVectorToVector(vector<int>* vect1, vector<int> vect2){
     vect1->assign(vect2.begin(), vect2.end());
 }
@@ -99,10 +102,10 @@ void Logic::readGraphFromFile(string fileName) {
 }
 
 void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider) {
-    cout << endl;
-    cout << "Find biggest clique" << endl;
-    cout << "P: "; printVector(nodesToConsider);
-    cout << "R: "; printVector(partialResult);
+    //cout << endl;
+    //cout << "Find biggest clique" << endl;
+    //cout << "P: "; printVector(nodesToConsider);
+    //cout << "R: "; printVector(partialResult);
 
     vector<int> nodesToConsiderPrimP;
     vector<int> nodesToConsiderBisP;
@@ -112,12 +115,12 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
 
     if (nodesToConsider.empty()) {
         rms = partialResult.size();
-        if (rms >= rmsize) {
+        if (rms >= maximalCliqueSize) {
             maximalClique.assign(partialResult.begin(), partialResult.end());
-            rmsize = rms;
+            maximalCliqueSize = rms;
         }
-        cout << "BIGGEST: "; printVector(maximalClique);
-        cout << "SIZE: " << rmsize << endl;
+        //cout << "BIGGEST: "; printVector(maximalClique);
+        //cout << "SIZE: " << rmsize << endl;
     } else {
         nodesToConsiderBisP.clear();
         nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
@@ -157,12 +160,15 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
             findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP);
 
             removeElementFromVector(&nodesToConsider, v);  // P - v
-            cout<<"***P: "; printVector(nodesToConsider);
+            //cout<<"***P: "; printVector(nodesToConsider);
         }
     }
 }
 
-
+void Logic::printResult() {
+    cout<<"MAXIMAL CLIQUE: "; printVector(maximalClique);
+    cout<< "SIZE: "<< maximalCliqueSize<<endl;
+}
 const vector<int> &Logic::getNodesToConsider() const {
     return nodesToConsider;
 }
@@ -176,7 +182,7 @@ const vector<int> &Logic::getSkippedNodes() const {
 }
 
 const int &Logic::getRmsize() const {
-    return rmsize;
+    return maximalCliqueSize;
 }
 
 void Logic::setPartialResult(const vector<int> &partialResult) {

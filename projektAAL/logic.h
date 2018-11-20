@@ -15,7 +15,7 @@ class Logic {
 public:
     Logic(Graph *graph);
     ~Logic();
-    int rmsize; // biggest clique's size
+    int maximalCliqueSize; // biggest clique's size
     vector<int> maximalClique;
     void findBiggestClique(Graph *graph, vector<int> nodesToConsider, vector<int> partialResult);
     const vector<int> &getNodesToConsider() const;
@@ -25,6 +25,7 @@ public:
     void readGraphFromFile(string fileName);
     vector<int> changeStringVectorToInts(vector<string> strVect);
     void initializeNodesToConsiderVect(int numberOfNodes);
+    void printResult();
     void setSkippedNodes(const vector<int> &skippedNodes);
     void setPartialResult(const vector<int> &partialResult);
 
