@@ -122,7 +122,6 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
                 v = u;   // piwot
                 ncmax = nc;
             }
-            // TODO: Później else na górze zastąpić tą jedną linijką
             //v = findPiwot(&nodesToConsider); // finds node with the biggest number of neighbours in nodesToConsider vector
         }
         nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
