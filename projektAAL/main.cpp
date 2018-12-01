@@ -12,10 +12,17 @@ using namespace std;
 
 
 int main(int argc, char* argv[]){
-    Interface *interface = new Interface();
-    interface->menu(argc, argv);
+    try
+    {
+        Interface *interface = new Interface();
+        interface->menu(argc, argv);
 
-    delete interface;
+        delete interface;
+    }
+    catch (std::exception const &exc)
+    {
+        std::cerr << "Exception caught: " << exc.what() << "\n";
+    }
 
     return 0;
 }

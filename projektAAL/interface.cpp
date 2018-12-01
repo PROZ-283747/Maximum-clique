@@ -35,6 +35,7 @@ int Interface::getMode(char* argv[]){
     return ch[2]-48;
 }
 
+// m1: fileName, m2, m3: numOfNodes
 int Interface::getSecondArg(char* argv[]){
     return stoi(argv[2]);
 }
@@ -48,7 +49,7 @@ int Interface::getFourthArg(char* argv[]){
 }
 
 void Interface::menu(int argc, char* argv[]) {
-    if(argc == 1 ){
+    if(argc == 1 || argc == 2 ){
         cout << "Incorrect number of arguments ! At least 1 needed." << endl;
         printWaysToRunProgram();
     }
@@ -61,10 +62,11 @@ void Interface::menu(int argc, char* argv[]) {
             switch (choice) {
                 case 1:
                     cout << "case 1" << endl;
-                    logic->readGraphFromFile(argv[2]);
+                    fileManager->readGraphFromFile(argv[2], myGraph);
                     myGraph->printNeighbours();
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
                     logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
+                    logic->printResult();
                     break;
                 case 2:
                     cout << "case 2" << endl;
@@ -76,11 +78,12 @@ void Interface::menu(int argc, char* argv[]) {
                     cout<<"****"<<endl;
                     logic->initializeNodesToConsiderVect(myGraph->getNumberOfNodes());
                     logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
+                    logic->printResult();
                     break;
                 case 3:
                     cout << "case 3" << endl;
                     for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
-                        graphGenerator = new GraphGenerator(i, 40, 5);
+                        graphGenerator = new GraphGenerator(i, 0, 5); // args: numberOfNodes, numberOfEdgesBesideClique, sizeOfClique,
                         myGraph->setGraph(graphGenerator->generateGraph());
                         //cout << "**" << myGraph->getNumberOfNodes() << "**" << endl;
                         //myGraph->printNeighbours();
@@ -92,7 +95,7 @@ void Interface::menu(int argc, char* argv[]) {
                         int endTime = clock();
                         logic->printResult();
                         cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC <<endl;
-                        fileManager->saveResultToFile("../result.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC );
+                        fileManager->saveResultToFile("../result4.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC );
                     }
                     break;
                 default:

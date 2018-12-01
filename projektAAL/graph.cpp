@@ -7,6 +7,7 @@
 #include "graph.h"
 
 Graph::Graph() : numberOfNodes(0) {
+    cout<<"Konstruktor grafu"<<endl;
 }
 
 Graph::~Graph() {}

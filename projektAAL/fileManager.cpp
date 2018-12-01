@@ -5,7 +5,9 @@
 
 #include <fstream>
 #include <iomanip>
+#include <regex>
 #include "fileManager.h"
+
 
 void FileManager::saveResultToFile(string fileName, int numOfNodes, float time){
     cout<<"vhjdtgfxhsfdxbg";
@@ -41,4 +43,42 @@ void FileManager::saveGraphToFile(string fileName, int numOfNodes, vector<vector
     else
         cout << "Saving to file failed.";
     outputFile.close();
+}
+
+vector<int> FileManager::changeStringVectorToInts(vector<string> strVect){
+    vector<int> intVect;
+    for(int i=0; i< strVect.size(); ++i){
+        intVect.push_back(stoi(strVect[i]));
+    }
+    return intVect;
+}
+
+void FileManager::readGraphFromFile(string fileName, Graph *myGraph) {
+    cout << "Read graph form console"<<endl;
+    int numOfNodes=0;
+    string neighboursOfOneNode;
+
+    ifstream file;
+    file.open("../" + fileName, ios::out);
+
+    if(file) {
+        file >> numOfNodes;
+        myGraph->setNumberOfNodes(numOfNodes);
+        cout << "NumN: " << numOfNodes << endl;
+        std::getline( file, neighboursOfOneNode ); // reads line with number of nodes
+        while( !file.eof() ) /* Dopóki kursor nie znajdzie sie na koncu EOF - 'EndOfFile' */
+        {
+            for(int i=0; i <  numOfNodes; ++i) {
+                std::getline(file, neighboursOfOneNode); /* Funkcja getline wczytuje caly wiersz do stringa */
+                istringstream iss(neighboursOfOneNode);
+                vector<string> neighbours((istream_iterator<string>(iss)), istream_iterator<string>());
+                myGraph->setNeighbours(changeStringVectorToInts(neighbours));
+            }
+        }
+    }
+    else{
+        cout<<"Opening file failed."<<endl;
+        return;
+    }
+    file.close();
 }

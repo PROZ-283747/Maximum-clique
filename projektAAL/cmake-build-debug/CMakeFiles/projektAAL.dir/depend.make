@@ -3,11 +3,13 @@
 
 CMakeFiles/projektAAL.dir/fileManager.cpp.obj: ../fileManager.cpp
 CMakeFiles/projektAAL.dir/fileManager.cpp.obj: ../fileManager.h
+CMakeFiles/projektAAL.dir/fileManager.cpp.obj: ../graph.h
 
 CMakeFiles/projektAAL.dir/graph.cpp.obj: ../graph.cpp
 CMakeFiles/projektAAL.dir/graph.cpp.obj: ../graph.h
 
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../fileManager.h
+CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.cpp
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.h
 

@@ -22,6 +22,7 @@ void Logic::initializeNodesToConsiderVect(int numberOfNodes){
     }
     maximalClique.clear();
     maximalCliqueSize =0;
+    numOfRecursion = 0;
 }
 
 void Logic::assignVectorToVector(vector<int>* vect1, vector<int> vect2){
@@ -63,42 +64,27 @@ void Logic::printVector(vector<int> vector){
     cout<<endl;
 }
 
-vector<int> Logic::changeStringVectorToInts(vector<string> strVect){
-    vector<int> intVect;
-    for(int i=0; i< strVect.size(); ++i){
-        intVect.push_back(stoi(strVect[i]));
-    }
-    return intVect;
-}
-
-void Logic::readGraphFromFile(string fileName) {
-    cout << "Read graph form console"<<endl;
-    int numOfNodes=0;
-    string neighboursOfOneNode;
-
-    ifstream file;
-    file.open("../" + fileName, ios::out);
-
-    if(file) {
-        file >> numOfNodes;
-        myGraph->setNumberOfNodes(numOfNodes);
-        cout << "NumN: " << numOfNodes << endl;
-        std::getline( file, neighboursOfOneNode ); // reads line with number of nodes
-        while( !file.eof() ) /* Dopóki kursor nie znajdzie sie na koncu EOF - 'EndOfFile' */
-        {
-            for(int i=0; i <  numOfNodes; ++i) {
-                std::getline(file, neighboursOfOneNode); /* Funkcja getline wczytuje caly wiersz do stringa */
-                istringstream iss(neighboursOfOneNode);
-                vector<string> neighbours((istream_iterator<string>(iss)), istream_iterator<string>());
-                myGraph->setNeighbours(changeStringVectorToInts(neighbours));
+// wywołaj później to w algorytmie
+int Logic::findPiwot(vector<int>* vector){
+    int v; //piwot to return
+    int ncmax = 0;
+    // dla każdego wierzchołka w P"
+    for(int i = 0; i < nodesToConsider.size(); ++i) {
+        int nc = 0;
+        int u = nodesToConsider[i]; // wierzchołek z P" - indeks w neighbours
+        // dla każdego sąsiada wierzchołka u z P"
+        for (int j = 0; j < myGraph->getNeighbours()[u].size(); ++j) {
+            for (int k = 0; k < nodesToConsider.size(); ++k) {
+                if (myGraph->getNeighbours()[u][j] == nodesToConsider[k])
+                    nc++;
             }
         }
+        if (nc >= ncmax) {
+            v = u;   // piwot
+            ncmax = nc;
+        }
     }
-    else{
-        cout<<"Opening file failed."<<endl;
-        return;
-    }
-    file.close();
+    return v;
 }
 
 void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider) {
@@ -106,7 +92,7 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
     //cout << "Find biggest clique" << endl;
     //cout << "P: "; printVector(nodesToConsider);
     //cout << "R: "; printVector(partialResult);
-
+    numOfRecursion++;
     vector<int> nodesToConsiderPrimP;
     vector<int> nodesToConsiderBisP;
     vector<int> partialResultPrimR;
@@ -119,16 +105,12 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
             maximalClique.assign(partialResult.begin(), partialResult.end());
             maximalCliqueSize = rms;
         }
-        //cout << "BIGGEST: "; printVector(maximalClique);
-        //cout << "SIZE: " << rmsize << endl;
     } else {
-        nodesToConsiderBisP.clear();
-        nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
         ncmax = 0;
         // dla każdego wierzchołka w P"
-        for (int i = 0; i < nodesToConsiderBisP.size(); ++i) {
+        for (int i = 0; i < nodesToConsider.size(); ++i) {
             nc = 0;
-            u = nodesToConsiderBisP[i]; // wierzchołek z P" - indeks w neighbours
+            u = nodesToConsider[i]; // wierzchołek z P" - indeks w neighbours
             // dla każdego sąsiada wierzchołka u z P"
             for (int j = 0; j < myGraph->getNeighbours()[u].size(); ++j) {
                 for (int k = 0; k < nodesToConsider.size(); ++k) {
@@ -140,6 +122,8 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
                 v = u;   // piwot
                 ncmax = nc;
             }
+            // TODO: Później else na górze zastąpić tą jedną linijką
+            //v = findPiwot(&nodesToConsider); // finds node with the biggest number of neighbours in nodesToConsider vector
         }
         nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
         for (int i = 0; i < myGraph->getNeighbours()[v].size(); ++i) {
@@ -160,14 +144,16 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
             findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP);
 
             removeElementFromVector(&nodesToConsider, v);  // P - v
-            //cout<<"***P: "; printVector(nodesToConsider);
         }
     }
 }
 
+
+
 void Logic::printResult() {
     cout<<"MAXIMAL CLIQUE: "; printVector(maximalClique);
     cout<< "SIZE: "<< maximalCliqueSize<<endl;
+    cout<< "NUMofRECURSION: "<< numOfRecursion<<endl;
 }
 const vector<int> &Logic::getNodesToConsider() const {
     return nodesToConsider;

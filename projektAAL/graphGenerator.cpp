@@ -65,6 +65,7 @@ void GraphGenerator::setVerticeToGraph(pair<int, int> vertice, vector<vector<int
         (*neighbours)[vertice.second].push_back(vertice.first);
 }
 
+// puts empty vectors to neighbors, then they will be filled
 void GraphGenerator::initializeAuxiliaryVector(vector<vector<int>> *neighbours){
     for(int i=0; i < numberOfNodes; ++i){
         neighbours->push_back({});
@@ -74,20 +75,18 @@ void GraphGenerator::initializeAuxiliaryVector(vector<vector<int>> *neighbours){
 // Generates graph, fills in graph's attributes while creating it and saves graph to file
 pair<int, vector<vector<int>>> GraphGenerator::generateGraph(){
     cout<<"generate"<<endl;
-    pair<int, vector<vector<int>>> graphParams; // first value is number od nodes and second neighbours of nodes
+    pair<int, vector<vector<int>>> graphParams; // first value is number of nodes and second are neighbours of nodes
     vector<vector<int>> neighbours;
     initializeAuxiliaryVector(&neighbours);
 
     graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
     vector<int> biggestClique = generateNumbersWithoutRepetition(sizeOfBiggestClique, numberOfNodes);
     setCliqueToGraph(biggestClique, &neighbours);
-//    for(int j=0; j<biggestClique.size(); ++j){
-//        cout << "Q: " << biggestClique[j]<<endl;
-//    }
-    int numOfVerticesToAdd = numberOfEdges - (sizeOfBiggestClique*(sizeOfBiggestClique -1))/2;
-    for(int i=0; i < numOfVerticesToAdd; ++i){
-        setVerticeToGraph(generateVertice(neighbours), &neighbours);
-    }
+
+    // numOfEdges must be maximally equal to the difference between maximal number of edges in graph and number of edges in clique
+        for (int i = 0; i < numberOfEdges; ++i) {
+            setVerticeToGraph(generateVertice(neighbours), &neighbours);
+        }
     fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
     graphParams.second = neighbours;
     return graphParams;

@@ -6,19 +6,27 @@
 
 #IncludeRegexTransform: 
 
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.cpp
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+vector
+-
 fstream
 -
-iomanip
--
-fileManager.h
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.h
-
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.h
 string
--
-vector
 -
 iostream
 -
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp
+regex
+-
+logic.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+iostream
+-
+algorithm
+-
+graph.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
 
