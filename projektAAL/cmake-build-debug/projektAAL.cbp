@@ -112,6 +112,12 @@
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h">
 			<Option target="projektAAL"/>
 		</Unit>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.cpp">
+			<Option target="projektAAL"/>
+		</Unit>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h">
+			<Option target="projektAAL"/>
+		</Unit>
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/main.cpp">
 			<Option target="projektAAL"/>
 		</Unit>

@@ -16,16 +16,12 @@ string
 iostream
 -
 
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp
-regex
--
-logic.h
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.cpp
+logic2.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h
 
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
-iostream
--
-algorithm
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h
+set
 -
 graph.h
 F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h

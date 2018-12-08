@@ -22,10 +22,8 @@ public:
     const vector<int> &getPartialResult() const;
     const vector<int> &getSkippedNodes() const;
     const int &getRmsize() const;
-    //void readGraphFromFile(string fileName);
-    //vector<int> changeStringVectorToInts(vector<string> strVect);
     int findPiwot(vector<int>* vector);
-    void initializeNodesToConsiderVect(int numberOfNodes);
+    void initializeLogic(int numberOfNodes);
     void printResult();
     void setSkippedNodes(const vector<int> &skippedNodes);
     void setPartialResult(const vector<int> &partialResult);

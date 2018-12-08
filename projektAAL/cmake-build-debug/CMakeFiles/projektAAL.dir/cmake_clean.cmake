@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projektAAL.dir/interface.cpp.obj"
   "CMakeFiles/projektAAL.dir/logic.cpp.obj"
   "CMakeFiles/projektAAL.dir/fileManager.cpp.obj"
+  "CMakeFiles/projektAAL.dir/logic2.cpp.obj"
   "projektAAL.pdb"
   "projektAAL.exe"
   "projektAAL.exe.manifest"

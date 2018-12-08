@@ -257,6 +257,33 @@ logic.cpp.s:
 	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/logic.cpp.s
 .PHONY : logic.cpp.s
 
+logic2.obj: logic2.cpp.obj
+
+.PHONY : logic2.obj
+
+# target to build an object file
+logic2.cpp.obj:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/logic2.cpp.obj
+.PHONY : logic2.cpp.obj
+
+logic2.i: logic2.cpp.i
+
+.PHONY : logic2.i
+
+# target to preprocess a source file
+logic2.cpp.i:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/logic2.cpp.i
+.PHONY : logic2.cpp.i
+
+logic2.s: logic2.cpp.s
+
+.PHONY : logic2.s
+
+# target to generate assembly for a file
+logic2.cpp.s:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/logic2.cpp.s
+.PHONY : logic2.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -308,6 +335,9 @@ help:
 	@echo ... logic.obj
 	@echo ... logic.i
 	@echo ... logic.s
+	@echo ... logic2.obj
+	@echo ... logic2.i
+	@echo ... logic2.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

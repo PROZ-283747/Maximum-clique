@@ -12,7 +12,7 @@
 #include <iterator>
 #include <string>
 #include <ctime>
-#include "logic.h"
+#include "logic2.h"
 #include "graph.h"
 #include "graphGenerator.h"
 
@@ -25,12 +25,13 @@ public:
 
 private:
     Graph *myGraph;
-    Logic *logic;
+    Logic2 *logic;
     FileManager *fileManager;
-    string fileWithGraph;
     int getSecondArg(char* argv[]);
     int getThirdArg(char* argv[]);
     int getFourthArg(char* argv[]);
+    int getFifthArg(char* argv[]);
+    int getSixthArg(char* argv[]);
     int getMode(char* argv[]);
     void printWaysToRunProgram();
 };

@@ -13,6 +13,12 @@ GraphGenerator::GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique
     sizeOfBiggestClique = sizeOfBClique;
 };
 
+GraphGenerator::GraphGenerator(int numOfNodes){
+    numberOfNodes = numOfNodes;
+    numberOfEdges = numOfNodes*(numOfNodes-1)/2;
+    sizeOfBiggestClique = numOfNodes;
+};
+
 vector<int> GraphGenerator::generateNumbersWithoutRepetition(int number, int upperRange){
     vector<int> vector;
     while(vector.size() < number){
@@ -78,8 +84,6 @@ pair<int, vector<vector<int>>> GraphGenerator::generateGraph(){
     pair<int, vector<vector<int>>> graphParams; // first value is number of nodes and second are neighbours of nodes
     vector<vector<int>> neighbours;
     initializeAuxiliaryVector(&neighbours);
-
-    graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
     vector<int> biggestClique = generateNumbersWithoutRepetition(sizeOfBiggestClique, numberOfNodes);
     setCliqueToGraph(biggestClique, &neighbours);
 
@@ -87,7 +91,27 @@ pair<int, vector<vector<int>>> GraphGenerator::generateGraph(){
         for (int i = 0; i < numberOfEdges; ++i) {
             setVerticeToGraph(generateVertice(neighbours), &neighbours);
         }
+
     fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
+    graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
+    graphParams.second = neighbours;
+    return graphParams;
+}
+
+pair<int, vector<vector<int>>> GraphGenerator::generateCompleteGraph(){
+    cout<<"generateCompleteGraph"<<endl;
+    pair<int, vector<vector<int>>> graphParams; // first value is number of nodes and second are neighbours of nodes
+    vector<vector<int>> neighbours;
+    vector<int> biggestClique;
+
+    initializeAuxiliaryVector(&neighbours);
+    for(int i=0; i< numberOfNodes; ++i){
+        biggestClique.push_back(i);
+    }
+    setCliqueToGraph(biggestClique, &neighbours);
+
+    fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
+    graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
     graphParams.second = neighbours;
     return graphParams;
 }

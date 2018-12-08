@@ -31,8 +31,10 @@ private:
 
 public:
     GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique);
+    GraphGenerator(int numOfNodes);
     ~GraphGenerator();
     pair<int, vector<vector<int>>> generateGraph();
+    pair<int, vector<vector<int>>> generateCompleteGraph();
 };
 
 

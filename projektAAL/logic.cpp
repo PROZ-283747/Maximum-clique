@@ -3,6 +3,7 @@
  * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
  */
 #include <regex>
+#include <set>
 #include "logic.h"
 
 
@@ -16,7 +17,7 @@ Logic::Logic(Graph *graph) : maximalCliqueSize(0) {
 
 Logic::~Logic() {}
 
-void Logic::initializeNodesToConsiderVect(int numberOfNodes){
+void Logic::initializeLogic(int numberOfNodes){
     for(int i=0; i< numberOfNodes; ++i){
         nodesToConsider.push_back(i);
     }
@@ -147,7 +148,9 @@ void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<in
     }
 }
 
+void findBiggestClique2(set<int> partialResult, set<int> nodesToConsider, set<int> skippedNpdes){
 
+}
 
 void Logic::printResult() {
     cout<<"MAXIMAL CLIQUE: "; printVector(maximalClique);
