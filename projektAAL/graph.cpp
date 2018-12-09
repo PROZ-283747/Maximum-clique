@@ -22,12 +22,14 @@ void Graph::setNeighbours(vector<int> intVect){
 
 void Graph::printNeighbours(){
     cout<<"Print neighbours"<<endl;
+    cout<<"**** "<< numberOfNodes<<" ****"<<endl;
     for(int i=0; i<neighbours.size(); ++i){
         for(int j=0; j<neighbours[i].size(); ++j){
             cout << neighbours[i][j]<< " ";
         }
         cout<<endl;
     }
+    cout<<"********"<<endl;
 }
 
 const vector<vector<int>> &Graph::getNeighbours() const {

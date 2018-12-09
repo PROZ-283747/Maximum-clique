@@ -1,185 +1,218 @@
-/* 11th November 2018
- * Author: Adela Jaworowska
- * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
- */
-#include <regex>
-#include <set>
+//
+// Created by adell.j on 07.12.2018.
+//
+
 #include "logic.h"
 
-
-Logic::Logic(Graph *graph) : maximalCliqueSize(0) {
-    cout<<"To ma sie wywolywac" << endl;
+Logic2::Logic2(Graph *graph){
+    //cout<<"Konstruktor" << endl;
     myGraph = graph;
-    partialResult.clear();
-    skippedNodes.clear();
-    nodesToConsider.clear();
+    maxCliqueSize = 0;
+    numOfRecursion=0;
+    maxClique.clear();
+    R.clear();
+    P.clear();
+    X.clear();
 }
 
-Logic::~Logic() {}
+Logic2::~Logic2() {}
 
-void Logic::initializeLogic(int numberOfNodes){
-    for(int i=0; i< numberOfNodes; ++i){
-        nodesToConsider.push_back(i);
+void Logic2::initializeLogic(int numOfNodes){
+    maxCliqueSize = 0;
+    maxClique.clear();
+    R.clear();
+    X.clear();
+    fillInNodesToP(numOfNodes);
+    numOfRecursion=0;
+}
+
+void Logic2::fillInNodesToP(int numOfNodes){
+    for(int i=0; i <  myGraph->getNumberOfNodes(); ++i){
+        P.insert(i);
     }
-    maximalClique.clear();
-    maximalCliqueSize =0;
-    numOfRecursion = 0;
+}
+bool Logic2::isMaxBigger(set<int> R){
+    //cout<< "isMaxBigger"<<endl;
+    if(R.size() <= maxClique.size())
+        return true;
+    return false;
 }
 
-void Logic::assignVectorToVector(vector<int>* vect1, vector<int> vect2){
-    vect1->assign(vect2.begin(), vect2.end());
+void Logic2::setNewMaxClique(set<int> R){
+    //cout<< "setNewMaxClique"<<endl;
+    maxClique.clear();
+    maxClique.insert(R.begin(), R.end());
+    maxCliqueSize = R.size();
 }
 
-vector<int> Logic::productOfTwoVectors(vector<int> vect1, vector<int> vect2){
-    vector<int> vector;
-    for(int i=0; i<vect1.size(); ++i){
-        if(isElementInVector(vect2, vect1[i]))
-            vector.push_back(vect1[i]);
+set<int> Logic2::getUnion(set<int> A, set<int> B){
+    //cout<< "getUnion"<<endl;
+    set<int> unionSet;
+    auto itA = A.begin();
+    auto itB = B.begin();
+    if(A.empty())
+        return B;
+    if(B.empty())
+        return A;
+    while(itA != A.end() && itB != B.end()) {
+        if (*itA < *itB) {
+            unionSet.insert(*itA);
+            ++itA;
+        }
+        if (*itA > *itB) {
+            unionSet.insert(*itB);
+            ++itB;
+        }
+        if(itA == A.end() && itB != B.end())
+            unionSet.insert(*itB);
+        if(itA != A.end() && itB == B.end())
+            unionSet.insert(*itA);
     }
-    return vector;
+    return unionSet;
 }
 
-bool Logic::isElementInVector(vector<int> vector, int element){
-    find(vector.begin(), vector.end(), element) != vector.end();
-}
+set<int> Logic2::getIntersection(set<int> A, set<int> B) {
+    //cout<< "getIntersection"<<endl;
+    set<int> intersectionSet;
+    auto itA = A.begin();
+    auto itB = B.begin();
+    while (itA != A.end() && itB != B.end()) {
+        if (*itA == *itB) {
+            intersectionSet.insert(*itA);
+            ++itA;
+            ++itB;
+        } else {
+            if (*itA > *itB)
+                ++itB;
+            if (*itA < *itB)
+                ++itA;
 
-int Logic::findPositionOfElementInVector(vector<int> vector, int element){
-    for(int i=0; i< vector.size(); ++i){
-        if(vector[i] ==  element)
-            return i;
+        }
     }
-    return -1;
+    return intersectionSet;
 }
 
-void Logic::removeElementFromVector(vector<int>* vector, int element){
-    if(isElementInVector(*vector, element)) {
-        vector->erase(vector->begin() + findPositionOfElementInVector(*vector, element));
+set<int> Logic2::substractSet(set<int> setFrom, vector<int> toSubs) {
+    for(auto it = toSubs.begin(); it != toSubs.end(); ++it) {
+        setFrom.erase(*it);
     }
-    return;
+    return setFrom;
 }
 
-void Logic::printVector(vector<int> vector){
-    for(int i=0; i< vector.size(); ++i){
-        cout<< vector[i] << " ";
+void Logic2::removeNode(set<int> *set, int node){
+    set->erase(node);
+}
+
+void Logic2::addNode(set<int> *set, int node){
+    set->insert(node);
+}
+
+set<int> Logic2::createSet(vector<int> vector){
+    set<int> result;
+    for(int i=0; i < vector.size(); ++i){
+        result.insert(vector[i]);
+    }
+    return result;
+}
+
+int Logic2::findPivot(set<int> set) {
+    //cout << "findPivot" << endl;
+    int pivot;
+    int maxNCount = 0;
+    // dla każdego wierzchołka w P"
+    for (auto it = set.begin(); it != set.end(); ++it) {
+        int neighbourtsCount = 0;
+        int node = *it; // index in neighbours
+        // count number of neighbours(belonging to set P) for every node from set
+        for (int i = 0; i < myGraph->getNeighbours()[node].size(); ++i) {
+            for (auto itP = set.begin(); itP != set.end(); ++itP) {
+                if (myGraph->getNeighbours()[node][i] == *itP)
+                    ++neighbourtsCount;
+            }
+        }
+        if (neighbourtsCount >= maxNCount) {
+            pivot = *it;   // set new pivot
+            maxNCount = neighbourtsCount;
+        }
+    }
+    return pivot;
+}
+
+void Logic2::printSet(set<int> set){
+    for(auto it = set.begin(); it != set.end(); ++it){
+        cout<< *it << " ";
     }
     cout<<endl;
 }
 
-// wywołaj później to w algorytmie
-int Logic::findPiwot(vector<int>* vector){
-    int v; //piwot to return
-    int ncmax = 0;
-    // dla każdego wierzchołka w P"
-    for(int i = 0; i < nodesToConsider.size(); ++i) {
-        int nc = 0;
-        int u = nodesToConsider[i]; // wierzchołek z P" - indeks w neighbours
-        // dla każdego sąsiada wierzchołka u z P"
-        for (int j = 0; j < myGraph->getNeighbours()[u].size(); ++j) {
-            for (int k = 0; k < nodesToConsider.size(); ++k) {
-                if (myGraph->getNeighbours()[u][j] == nodesToConsider[k])
-                    nc++;
-            }
-        }
-        if (nc >= ncmax) {
-            v = u;   // piwot
-            ncmax = nc;
+void Logic2::printResult(){
+    cout<<"MAXIMAL CLIQUE: "; printSet(maxClique);
+    cout<< "SIZE: "<< maxCliqueSize<<endl;
+    cout<< "Num of rec: "<< numOfRecursion<<endl;
+}
+
+const set<int> &Logic2::getP() const {
+    return P;
+}
+
+const set<int> &Logic2::getR() const {
+    return R;
+}
+
+const set<int> &Logic2::getX() const {
+    return X;
+}
+
+void Logic2::setP(const set<int> &P) {
+    Logic2::P = P;
+}
+
+void Logic2::setR(const set<int> &R) {
+    Logic2::R = R;
+}
+
+void Logic2::setX(const set<int> &X) {
+    Logic2::X = X;
+}
+
+void Logic2::findMaximalClique(set<int> R, set<int> P, set<int> X) {
+    ++numOfRecursion;
+//    cout<<endl << "START" << endl;
+//    cout << "R: "; printSet(R);
+//    cout << "P: "; printSet(P);
+//    cout << "X: "; printSet(X);
+//    cout << "MAX: "; printSet(maxClique);
+    set<int> newR;
+    set<int> newP;
+    set<int> newX;
+    if (P.empty() && X.empty()) {
+        if (!isMaxBigger(R))
+            setNewMaxClique(R);
+    }
+    else {
+        int pivot = findPivot(getUnion(P, X)); // sasiedzi zaw sie w P czy w P suma X ????
+//        cout << "Pivot: " << pivot << endl;
+        set<int> withoutNeighbours = substractSet(P, myGraph->getNeighbours()[pivot]);
+//        cout << "Without neighbours: "; printSet(withoutNeighbours);
+
+        for (auto it = withoutNeighbours.begin(); it != withoutNeighbours.end(); ++it) {
+//            cout<< "IT: "<< *it<<endl;
+//            cout<< "set: "; printSet(createSet(myGraph->getNeighbours()[*it]));
+            newR.clear();
+            newP.clear();
+            newX.clear();
+            newR.insert(R.begin(), R.end());
+            addNode(&newR, *it);
+            newP = getIntersection(P, createSet(myGraph->getNeighbours()[*it]));
+            newX = getIntersection(X, createSet(myGraph->getNeighbours()[*it]));
+
+//            cout << "newR: "; printSet(newR);
+//            cout << "newP: "; printSet(newP);
+//            cout << "newX: "; printSet(newX);
+            findMaximalClique(newR, newP, newX);
+            removeNode(&P, *it);
+            addNode(&X, *it);
         }
     }
-    return v;
-}
-
-void Logic::findBiggestClique(Graph *graph, vector<int> partialResult, vector<int> nodesToConsider) {
-    //cout << endl;
-    //cout << "Find biggest clique" << endl;
-    //cout << "P: "; printVector(nodesToConsider);
-    //cout << "R: "; printVector(partialResult);
-    numOfRecursion++;
-    vector<int> nodesToConsiderPrimP;
-    vector<int> nodesToConsiderBisP;
-    vector<int> partialResultPrimR;
-    vector<int> tempNodesN;
-    int u = 0, v = 0, ncmax = 0, nc = 0, rms = 0;
-
-    if (nodesToConsider.empty()) {
-        rms = partialResult.size();
-        if (rms >= maximalCliqueSize) {
-            maximalClique.assign(partialResult.begin(), partialResult.end());
-            maximalCliqueSize = rms;
-        }
-    } else {
-        ncmax = 0;
-        // dla każdego wierzchołka w P"
-        for (int i = 0; i < nodesToConsider.size(); ++i) {
-            nc = 0;
-            u = nodesToConsider[i]; // wierzchołek z P" - indeks w neighbours
-            // dla każdego sąsiada wierzchołka u z P"
-            for (int j = 0; j < myGraph->getNeighbours()[u].size(); ++j) {
-                for (int k = 0; k < nodesToConsider.size(); ++k) {
-                    if (myGraph->getNeighbours()[u][j] == nodesToConsider[k])
-                        nc++;
-                }
-            }
-            if (nc >= ncmax) {
-                v = u;   // piwot
-                ncmax = nc;
-            }
-            //v = findPiwot(&nodesToConsider); // finds node with the biggest number of neighbours in nodesToConsider vector
-        }
-        nodesToConsiderBisP.assign(nodesToConsider.begin(), nodesToConsider.end());
-        for (int i = 0; i < myGraph->getNeighbours()[v].size(); ++i) {
-            removeElementFromVector(&nodesToConsiderBisP, myGraph->getNeighbours()[v][i]);
-        }
-        nodesToConsiderPrimP.clear();
-        partialResultPrimR.clear();
-        for (int i = 0; i < nodesToConsiderBisP.size(); ++i) {
-            u = nodesToConsiderBisP[i];
-            tempNodesN.clear();
-            for (int j = 0; j < myGraph->getNeighbours()[u].size(); ++j) {
-                tempNodesN.push_back(myGraph->getNeighbours()[u][j]);
-            }
-            partialResultPrimR.assign(partialResult.begin(), partialResult.end());
-            partialResultPrimR.push_back(u); // było v a nie u
-            assignVectorToVector(&nodesToConsiderPrimP, productOfTwoVectors(nodesToConsider, tempNodesN));
-
-            findBiggestClique(graph, partialResultPrimR, nodesToConsiderPrimP);
-
-            removeElementFromVector(&nodesToConsider, v);  // P - v
-        }
-    }
-}
-
-void findBiggestClique2(set<int> partialResult, set<int> nodesToConsider, set<int> skippedNpdes){
 
 }
-
-void Logic::printResult() {
-    cout<<"MAXIMAL CLIQUE: "; printVector(maximalClique);
-    cout<< "SIZE: "<< maximalCliqueSize<<endl;
-    cout<< "NUMofRECURSION: "<< numOfRecursion<<endl;
-}
-const vector<int> &Logic::getNodesToConsider() const {
-    return nodesToConsider;
-}
-
-const vector<int> &Logic::getPartialResult() const {
-    return partialResult;
-}
-
-const vector<int> &Logic::getSkippedNodes() const {
-    return skippedNodes;
-}
-
-const int &Logic::getRmsize() const {
-    return maximalCliqueSize;
-}
-
-void Logic::setPartialResult(const vector<int> &partialResult) {
-    Logic::partialResult = partialResult;
-}
-
-void Logic::setSkippedNodes(const vector<int> &skippedNodes) {
-    Logic::skippedNodes = skippedNodes;
-}
-
-
-

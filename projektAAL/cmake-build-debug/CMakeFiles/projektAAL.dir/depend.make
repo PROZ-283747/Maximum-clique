@@ -24,6 +24,10 @@ CMakeFiles/projektAAL.dir/logic.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.cpp
 CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.h
 
+CMakeFiles/projektAAL.dir/logic_old.cpp.obj: ../graph.h
+CMakeFiles/projektAAL.dir/logic_old.cpp.obj: ../logic_old.cpp
+CMakeFiles/projektAAL.dir/logic_old.cpp.obj: ../logic_old.h
+
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../fileManager.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../graphGenerator.h

@@ -12,35 +12,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0814f33-564c-4c93-adc5-3ac10ae03d92" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/logic2.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logic2.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/interface.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/interface.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/logic.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/logic.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/main.cpp.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/projektAAL.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projektAAL.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/projektAAL.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projektAAL.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/projektAAL.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/projektAAL.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/genGraph.txt" beforeDir="false" afterPath="$PROJECT_DIR$/genGraph.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphGenerator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graphGenerator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphGenerator.h" beforeDir="false" afterPath="$PROJECT_DIR$/graphGenerator.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/graph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/graph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/interface.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/interface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/logic.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/logic.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/result4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/result4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/logic_old.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic.h" beforeDir="false" afterPath="$PROJECT_DIR$/logic_old.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/logic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logic2.h" beforeDir="false" afterPath="$PROJECT_DIR$/logic.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,23 +66,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="22293" />
+          <entry key="cpp" value="22402" />
           <entry key="h" value="3395" />
-          <entry key="txt" value="316" />
+          <entry key="txt" value="370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="25688" />
-          <entry key="PLAIN_TEXT" value="316" />
+          <entry key="ObjectiveC" value="25797" />
+          <entry key="PLAIN_TEXT" value="370" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="algorithm" value="1" />
           <entry key="c" value="1" />
-          <entry key="cpp" value="25" />
-          <entry key="h" value="35" />
+          <entry key="cpp" value="26" />
+          <entry key="h" value="36" />
           <entry key="tcc" value="1" />
           <entry key="txt" value="1" />
         </counts>
@@ -105,7 +90,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CMakeLists.txt" value="1" />
-          <entry key="ObjectiveC" value="63" />
+          <entry key="ObjectiveC" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -117,19 +102,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/interface.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="89" column="90" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="340">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="e#136#158#0" expanded="true" />
@@ -138,10 +114,19 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/interface.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1417">
+              <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interface.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="246">
               <caret line="24" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="e#199#217#0" expanded="true" />
@@ -151,43 +136,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <element signature="e#189#208#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/logic.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="108" column="11" lean-forward="true" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
-              <folding>
-                <element signature="e#135#151#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-1145">
+              <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic2.cpp">
+        <entry file="file://$PROJECT_DIR$/logic.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1931">
-              <caret line="200" column="29" lean-forward="true" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logic2.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+            <state relative-caret-position="246">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
               <folding>
                 <element signature="e#101#115#0" expanded="true" />
               </folding>
@@ -231,6 +192,30 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+              <folding>
+                <element signature="e#191#208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/graph.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+              <folding>
+                <element signature="e#136#152#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -247,16 +232,17 @@
         <option value="$PROJECT_DIR$/graph.h" />
         <option value="$PROJECT_DIR$/fileManager.h" />
         <option value="$PROJECT_DIR$/fileManager.cpp" />
-        <option value="$PROJECT_DIR$/graph.cpp" />
         <option value="$PROJECT_DIR$/../../../TKOM/test/main.cpp" />
         <option value="$PROJECT_DIR$/graphGenerator.h" />
         <option value="$PROJECT_DIR$/graphGenerator.cpp" />
-        <option value="$PROJECT_DIR$/logic.h" />
-        <option value="$PROJECT_DIR$/logic.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/interface.h" />
         <option value="$PROJECT_DIR$/logic2.h" />
         <option value="$PROJECT_DIR$/logic2.cpp" />
+        <option value="$PROJECT_DIR$/logic_old.cpp" />
+        <option value="$PROJECT_DIR$/logic.h" />
+        <option value="$PROJECT_DIR$/logic.cpp" />
+        <option value="$PROJECT_DIR$/graph.cpp" />
         <option value="$PROJECT_DIR$/interface.cpp" />
       </list>
     </option>
@@ -321,7 +307,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="projektAAL" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-m2 20 20 5" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projektAAL" TARGET_NAME="projektAAL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projektAAL" RUN_TARGET_NAME="projektAAL">
+    <configuration name="projektAAL" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-m5 10 2 20" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projektAAL" TARGET_NAME="projektAAL" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projektAAL" RUN_TARGET_NAME="projektAAL">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -378,7 +364,7 @@
       <workItem from="1543489081615" duration="16261000" />
       <workItem from="1543598150458" duration="1043000" />
       <workItem from="1543694245433" duration="274000" />
-      <workItem from="1544015104992" duration="42521000" />
+      <workItem from="1544015104992" duration="49644000" />
     </task>
     <task id="LOCAL-00001" summary="Add reading graph from a file.&#10;A lot of unnecessary couts in code.">
       <created>1541953163651</created>
@@ -422,11 +408,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543694318604</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Alternative logic2 (std::set instead  of std::vector)">
+      <created>1544279314756</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1544279314756</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="309247000" />
+    <option name="totallyTimeSpent" value="316370000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,19 +432,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16375838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.47659576" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28085107" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43829787" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.6496454" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.7177305" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.5106383" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.4893617" />
@@ -499,7 +493,8 @@
     <MESSAGE value="Add graph generator, and running with parameters.&#10;SetGraph() form Graph class does not work yet -&gt; error." />
     <MESSAGE value="Saving to file time which algorithm took" />
     <MESSAGE value="Enjoy ! :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enjoy ! :)" />
+    <MESSAGE value="Alternative logic2 (std::set instead  of std::vector)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alternative logic2 (std::set instead  of std::vector)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h">
@@ -569,26 +564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#191#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="e#136#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fileManager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -629,19 +604,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interface.h">
+    <entry file="file://$PROJECT_DIR$/logic_old.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="392">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
           <folding>
-            <element signature="e#199#217#0" expanded="true" />
+            <element signature="e#135#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic_old.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+          <folding>
+            <element signature="e#189#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logic.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#101#115#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
+        <state relative-caret-position="340">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#136#158#0" expanded="true" />
@@ -649,47 +644,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#189#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logic.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="108" column="11" lean-forward="true" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+        <state relative-caret-position="-1145">
+          <caret line="118" column="6" selection-start-line="118" selection-start-column="6" selection-end-line="118" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
           <folding>
-            <element signature="e#135#151#0" expanded="true" />
+            <element signature="e#199#217#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic2.h">
+    <entry file="file://$PROJECT_DIR$/graph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
           <folding>
-            <element signature="e#101#115#0" expanded="true" />
+            <element signature="e#191#208#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logic2.cpp">
+    <entry file="file://$PROJECT_DIR$/graph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1931">
-          <caret line="200" column="29" lean-forward="true" selection-start-line="200" selection-start-column="29" selection-end-line="200" selection-end-column="29" />
+        <state relative-caret-position="273">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="e#136#152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/interface.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="89" column="90" selection-start-line="89" selection-start-column="90" selection-end-line="89" selection-end-column="90" />
+        <state relative-caret-position="1417">
+          <caret line="152" lean-forward="true" selection-start-line="152" selection-end-line="152" />
         </state>
       </provider>
     </entry>

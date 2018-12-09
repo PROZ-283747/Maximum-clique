@@ -1,46 +1,50 @@
-/* 11th November 2018
- * Author: Adela Jaworowska
- * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
- */
-#ifndef PROJEKTAAL_LOGIC_H
-#define PROJEKTAAL_LOGIC_H
-#include <iostream>
-#include <algorithm>
-#include "graph.h"
+//
+// Created by adell.j on 07.12.2018.
+//
 
+#ifndef PROJEKTAAL_LOGIC2_H
+#define PROJEKTAAL_LOGIC2_H
+
+#include <set>
+#include "graph.h"
 
 using namespace std;
 
-class Logic {
+class Logic2 {
 public:
-    Logic(Graph *graph);
-    ~Logic();
-    int maximalCliqueSize; // biggest clique's size
-    vector<int> maximalClique;
-    void findBiggestClique(Graph *graph, vector<int> nodesToConsider, vector<int> partialResult);
-    const vector<int> &getNodesToConsider() const;
-    const vector<int> &getPartialResult() const;
-    const vector<int> &getSkippedNodes() const;
-    const int &getRmsize() const;
-    int findPiwot(vector<int>* vector);
-    void initializeLogic(int numberOfNodes);
+    Logic2(Graph *graph);
+    ~Logic2();
+    void initializeLogic(int numOfNodes);
+    void findMaximalClique(set<int> R, set<int> P, set<int> X);
     void printResult();
-    void setSkippedNodes(const vector<int> &skippedNodes);
-    void setPartialResult(const vector<int> &partialResult);
+    void setP(const set<int> &P);
+    void setR(const set<int> &R);
+    void setX(const set<int> &X);
+    const set<int> &getP() const;
+    const set<int> &getR() const;
+    const set<int> &getX() const;
 
 private:
     Graph *myGraph;
-    vector<int> nodesToConsider;
-    vector<int> partialResult;
-    vector<int> skippedNodes;
+    set<int> maxClique;
+    int maxCliqueSize;
+    set<int> P;
+    set<int> R;
+    set<int> X;
     int numOfRecursion;
-    bool isElementInVector(vector<int> vector, int element);
-    int findPositionOfElementInVector(vector<int> vector, int element);
-    void removeElementFromVector(vector<int>* vector,  int element);
-    vector<int> productOfTwoVectors(vector<int> vect1, vector<int> vect2);
-    void assignVectorToVector(vector<int>* vect1, vector<int> vect2);
-    void printVector(vector<int>);
+    void fillInNodesToP(int numOfNodes);
+    bool isMaxBigger(set<int> R);
+    void setNewMaxClique(set<int> R);
+    set<int> getUnion(set<int> A, set<int> B);
+    set<int> getIntersection(set<int> A, set<int> B);
+    int findPivot(set<int> set);
+    set<int> substractSet(set<int> setFrom, vector<int> toSubs);
+    void removeNode(set<int> *set, int node);
+    void addNode(set<int> *set, int node);
+    set<int> createSet(vector<int> vector);
+    void printSet(set<int> set);
+
 };
 
 
-#endif //PROJEKTAAL_LOGIC_H
+#endif //PROJEKTAAL_LOGIC2_H

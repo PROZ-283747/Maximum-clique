@@ -12,7 +12,7 @@
 #include <iterator>
 #include <string>
 #include <ctime>
-#include "logic2.h"
+#include "logic.h"
 #include "graph.h"
 #include "graphGenerator.h"
 

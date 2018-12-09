@@ -73,79 +73,75 @@ void Interface::menu(int argc, char* argv[]) {
                     cout << "case 1" << endl;
                     fileManager->readGraphFromFile(argv[2], myGraph);
                     myGraph->printNeighbours();
-                    logic->initializeLogic2(myGraph->getNumberOfNodes());
-                    //logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
+                    logic->initializeLogic(myGraph->getNumberOfNodes());
                     logic->findMaximalClique(logic->getR(), logic->getP(), logic->getX());
                     logic->printResult();
                     break;
                 case 2:
                     cout << "case 2" << endl;
-                    cout << "Edges: " << stoi(argv[3])<<endl;
                     graphGenerator = new GraphGenerator(getSecondArg(argv), getThirdArg(argv), getFourthArg(argv));
                     myGraph->setGraph(graphGenerator->generateGraph());
-                    cout<<"**"<< myGraph->getNumberOfNodes()<<"**"<<endl;
                     myGraph->printNeighbours();
-                    cout<<"****"<<endl;
-                    logic->initializeLogic2(myGraph->getNumberOfNodes());
+                    logic->initializeLogic(myGraph->getNumberOfNodes());
                     logic->findMaximalClique(logic->getR(), logic->getP(), logic->getX());
-                    //logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
                     logic->printResult();
                     break;
-//                case 3: // Number of nodes is changed here
-//                    cout << "case 3" << endl;
-//                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
-//                        graphGenerator = new GraphGenerator(i, 0, 5); // args: numberOfNodes, numberOfEdgesBesideClique, sizeOfClique,
-//                        myGraph->setGraph(graphGenerator->generateGraph());
-//                        //cout << "**" << myGraph->getNumberOfNodes() << "**" << endl;
-//                        //myGraph->printNeighbours();
-//                        //cout << "****" << endl;
-//                        logic->initializeLogic(myGraph->getNumberOfNodes());
-//
-//                        int startTime = clock();
-//                        logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
-//                        int endTime = clock();
-//                        logic->printResult();
-//                        cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC <<endl;
-//                        fileManager->saveResultToFile("../result4.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC );
-//                    }
-//                    break;
-//                case 4: // Number of edges is changed here
-//                    cout << "case 4" << endl;
-//                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
-//                        graphGenerator = new GraphGenerator(i);
-//                        myGraph->setGraph(graphGenerator->generateCompleteGraph());
-//                        logic->initializeLogic(myGraph->getNumberOfNodes());
-//                        int startTime = clock();
-//                        logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
-//                        int endTime = clock();
-//                        logic->printResult();
-//                        cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC <<endl;
-//                        fileManager->saveResultToFile("../result4.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC );
-//
-//                    }
-//                    break;
-//                case 5: // Analyse of complete graph with different number of nodes
-//                    cout << "case 4" << endl;
-//                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
-//                        graphGenerator = new GraphGenerator(i);
-//                        myGraph->setGraph(graphGenerator->generateCompleteGraph());
-//                        int sumTime = 0;
-//                        int j = 0;
-//                        for(j = 0;  j< 20; ++j) {
-//                            int startTime = 0;
-//                            int endTime = 0;
-//                            logic->initializeLogic(myGraph->getNumberOfNodes());
-//                            startTime = clock();
-//                            logic->findBiggestClique(myGraph, logic->getPartialResult(), logic->getNodesToConsider());
-//                            endTime = clock();
-//                            sumTime += endTime - startTime;
-//                            logic->printResult();
-//                            cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC <<endl;
-//                        }
-//                        int averageTime = sumTime/j;
-//                        cout<<"Average time: "<< i <<" time: "<<(float)(averageTime)/CLOCKS_PER_SEC <<endl;
-//                        fileManager->saveResultToFile("../result5.txt", i, (float)(averageTime)/CLOCKS_PER_SEC );
-//                    }
+                case 3: // Number of nodes is changed here
+                    cout << "case 3" << endl;
+                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
+                        graphGenerator = new GraphGenerator(i, 0, 5); // args: numberOfNodes, numberOfEdgesBesideClique, sizeOfClique,
+                        myGraph->setGraph(graphGenerator->generateGraph());
+                        //cout << "**" << myGraph->getNumberOfNodes() << "**" << endl;
+                        //myGraph->printNeighbours();
+                        //cout << "****" << endl;
+                        logic->initializeLogic(myGraph->getNumberOfNodes());
+
+                        int startTime = clock();
+
+                        logic->findMaximalClique(logic->getR(), logic->getP(), logic->getX());
+                        int endTime = clock();
+                        logic->printResult();
+                        cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC<<endl;
+                        fileManager->saveResultToFile("../result4.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC);
+                    }
+                    break;
+                case 4: // Number of edges is changed here
+                    cout << "case 4" << endl;
+                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
+                        graphGenerator = new GraphGenerator(i);
+                        myGraph->setGraph(graphGenerator->generateCompleteGraph());
+                        logic->initializeLogic(myGraph->getNumberOfNodes());
+                        int startTime = clock();
+                        logic->findMaximalClique(logic->getR(), logic->getP(), logic->getX());
+                        int endTime = clock();
+                        logic->printResult();
+                        cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC*1000 <<endl;
+                        fileManager->saveResultToFile("../result4.txt", i, (float)(endTime-startTime)/CLOCKS_PER_SEC*1000);
+
+                    }
+                    break;
+                case 5: // Analyse of complete graph with different number of nodes
+                    cout << "case 4" << endl;
+                    for(int i = stoi(argv[2]); i< stoi(argv[2])+(stoi(argv[3])*stoi(argv[4])); i+=stoi(argv[3])) {
+                        graphGenerator = new GraphGenerator(i);
+                        myGraph->setGraph(graphGenerator->generateCompleteGraph());
+                        int sumTime = 0;
+                        int j = 0;
+                        for(j = 0;  j< 20; ++j) {
+                            int startTime = 0;
+                            int endTime = 0;
+                            logic->initializeLogic(myGraph->getNumberOfNodes());
+                            startTime = clock();
+                            logic->findMaximalClique(logic->getR(), logic->getP(), logic->getX());
+                            endTime = clock();
+                            sumTime += endTime - startTime;
+                            //logic->printResult();
+                            //cout<<"i: "<< i <<" time: "<<(float)(endTime-startTime)/CLOCKS_PER_SEC <<endl;
+                        }
+                        int averageTime = sumTime/j;
+                        cout<<"Average time: "<< i <<" time: "<<(float)(averageTime)/CLOCKS_PER_SEC*1000 <<endl;
+                        fileManager->saveResultToFile("../result8.txt", i, (float)(averageTime)/CLOCKS_PER_SEC*1000);
+                    }
                 default:
                     cout<< "default: ";
                     printWaysToRunProgram();
