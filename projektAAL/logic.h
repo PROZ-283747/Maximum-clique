@@ -32,6 +32,7 @@ private:
     set<int> R;
     set<int> X;
     int numOfRecursion;
+    int numOfSimpleInstruction;
     void fillInNodesToP(int numOfNodes);
     bool isMaxBigger(set<int> R);
     void setNewMaxClique(set<int> R);

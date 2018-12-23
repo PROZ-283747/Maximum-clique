@@ -7,18 +7,31 @@
 #include <iostream>
 #include "graphGenerator.h"
 
+// constructor to generate graph with given number of nodes, size od maximal clique and number of edges beside clique
 GraphGenerator::GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique){
+//  todo
+//    if(numOfNodes*(numOfNodes-1)< sizeOfBClique*(sizeOfBClique-1) + numOfEdges)
+//       throw "Inappropriate parameters to generate graph!";
     numberOfEdges = numOfEdges;
     numberOfNodes = numOfNodes;
     sizeOfBiggestClique = sizeOfBClique;
 };
 
+// constructor to generate full graph
 GraphGenerator::GraphGenerator(int numOfNodes){
     numberOfNodes = numOfNodes;
     numberOfEdges = numOfNodes*(numOfNodes-1)/2;
     sizeOfBiggestClique = numOfNodes;
 };
 
+// constructor to generate graph which is path
+GraphGenerator::GraphGenerator(int numOfNodes, int pathLength){
+    numberOfNodes = numOfNodes;
+    numberOfEdges = pathLength;
+    sizeOfBiggestClique = 0;
+};
+
+// use to generate nodes to maximal clique
 vector<int> GraphGenerator::generateNumbersWithoutRepetition(int number, int upperRange){
     vector<int> vector;
     while(vector.size() < number){
@@ -32,10 +45,12 @@ vector<int> GraphGenerator::generateNumbersWithoutRepetition(int number, int upp
     return vector;
 }
 
+// check if node is in vector
 bool GraphGenerator::isElementInVector(vector<int> vector, int element){
     find(vector.begin(), vector.end(), element) != vector.end();
 }
 
+// to generate edges beside the maximal clique; if particular egde have already existr it draws again
 pair<int, int> GraphGenerator::generateVertice(vector<vector<int>> neighbours){
     pair<int, int> vertice;
     int vert1;
@@ -50,10 +65,12 @@ pair<int, int> GraphGenerator::generateVertice(vector<vector<int>> neighbours){
     return vertice;
 }
 
+// checks if particular two nodes are connected
 bool GraphGenerator::verticeExists(pair<int, int> vertic, vector<vector<int>> neighbours){
     return isElementInVector(neighbours[vertic.first], vertic.second);
 }
 
+//sets given clique to the graph
 void GraphGenerator::setCliqueToGraph(vector<int> clique, vector<vector<int>> *neighbours){
     for(int i=0; i< clique.size(); ++i){
         int node = clique[i];
@@ -63,6 +80,7 @@ void GraphGenerator::setCliqueToGraph(vector<int> clique, vector<vector<int>> *n
         }
     }
 }
+
 
 void GraphGenerator::setVerticeToGraph(pair<int, int> vertice, vector<vector<int>> *neighbours){
     if(!isElementInVector((*neighbours)[vertice.first], vertice.second))
@@ -109,6 +127,36 @@ pair<int, vector<vector<int>>> GraphGenerator::generateCompleteGraph(){
         biggestClique.push_back(i);
     }
     setCliqueToGraph(biggestClique, &neighbours);
+
+    fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
+    graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.
+    graphParams.second = neighbours;
+    return graphParams;
+}
+
+pair<int, vector<vector<int>>> GraphGenerator::generatePathGraph(){
+    cout<<"generateCompleteGraph"<<endl;
+    pair<int, vector<vector<int>>> graphParams; // first value is number of nodes and second are neighbours of nodes
+    vector<vector<int>> neighbours;
+    vector<int> biggestClique;
+
+    cout<< "number of nodes: "<< numberOfNodes <<endl;
+    cout<< "number od edges: "<< numberOfEdges <<endl;
+
+    for(int i =0; i<numberOfNodes; ++i){
+        neighbours.push_back({});
+    }
+
+    for(int i=0; i < numberOfNodes; ++i){
+        cout<< "i: " << i << endl;
+        cout<< "i-1: " << i-1 << endl;
+        cout<< "i+1: " << i+1 << endl;
+        if(i-1 >= 0)
+            neighbours[i].push_back(i-1);
+        if(i+1 < numberOfNodes)
+            neighbours[i].push_back(i+1);
+    }
+
 
     fileManager->saveGraphToFile("../genGraph.txt", numberOfNodes, neighbours);
     graphParams.first = numberOfNodes; //assigns numberOfNodes given as an argument to the program to attribute in a class Graph.

@@ -108,18 +108,18 @@ CMakeFiles/projektAAL.dir/interface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/interface.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\interface.cpp -o CMakeFiles\projektAAL.dir\interface.cpp.s
 
-CMakeFiles/projektAAL.dir/logic.cpp.obj: CMakeFiles/projektAAL.dir/flags.make
-CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projektAAL.dir/logic.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projektAAL.dir\logic.cpp.obj -c F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp
+CMakeFiles/projektAAL.dir/logic_old.cpp.obj: CMakeFiles/projektAAL.dir/flags.make
+CMakeFiles/projektAAL.dir/logic_old.cpp.obj: ../logic_old.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/projektAAL.dir/logic_old.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projektAAL.dir\logic_old.cpp.obj -c F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic_old.cpp
 
-CMakeFiles/projektAAL.dir/logic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projektAAL.dir/logic.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp > CMakeFiles\projektAAL.dir\logic.cpp.i
+CMakeFiles/projektAAL.dir/logic_old.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projektAAL.dir/logic_old.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic_old.cpp > CMakeFiles\projektAAL.dir\logic_old.cpp.i
 
-CMakeFiles/projektAAL.dir/logic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/logic.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp -o CMakeFiles\projektAAL.dir\logic.cpp.s
+CMakeFiles/projektAAL.dir/logic_old.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/logic_old.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic_old.cpp -o CMakeFiles\projektAAL.dir\logic_old.cpp.s
 
 CMakeFiles/projektAAL.dir/fileManager.cpp.obj: CMakeFiles/projektAAL.dir/flags.make
 CMakeFiles/projektAAL.dir/fileManager.cpp.obj: ../fileManager.cpp
@@ -134,18 +134,18 @@ CMakeFiles/projektAAL.dir/fileManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/fileManager.cpp.s"
 	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\fileManager.cpp -o CMakeFiles\projektAAL.dir\fileManager.cpp.s
 
-CMakeFiles/projektAAL.dir/logic2.cpp.obj: CMakeFiles/projektAAL.dir/flags.make
-CMakeFiles/projektAAL.dir/logic2.cpp.obj: ../logic2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projektAAL.dir/logic2.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projektAAL.dir\logic2.cpp.obj -c F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic2.cpp
+CMakeFiles/projektAAL.dir/logic.cpp.obj: CMakeFiles/projektAAL.dir/flags.make
+CMakeFiles/projektAAL.dir/logic.cpp.obj: ../logic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/projektAAL.dir/logic.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\projektAAL.dir\logic.cpp.obj -c F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp
 
-CMakeFiles/projektAAL.dir/logic2.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projektAAL.dir/logic2.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic2.cpp > CMakeFiles\projektAAL.dir\logic2.cpp.i
+CMakeFiles/projektAAL.dir/logic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/projektAAL.dir/logic.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp > CMakeFiles\projektAAL.dir\logic.cpp.i
 
-CMakeFiles/projektAAL.dir/logic2.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/logic2.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic2.cpp -o CMakeFiles\projektAAL.dir\logic2.cpp.s
+CMakeFiles/projektAAL.dir/logic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/projektAAL.dir/logic.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\ADELA\STUDIA\SEM_5\AAL\PROJEKT\projektAAL\logic.cpp -o CMakeFiles\projektAAL.dir\logic.cpp.s
 
 # Object files for target projektAAL
 projektAAL_OBJECTS = \
@@ -153,9 +153,9 @@ projektAAL_OBJECTS = \
 "CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj" \
 "CMakeFiles/projektAAL.dir/graph.cpp.obj" \
 "CMakeFiles/projektAAL.dir/interface.cpp.obj" \
-"CMakeFiles/projektAAL.dir/logic.cpp.obj" \
+"CMakeFiles/projektAAL.dir/logic_old.cpp.obj" \
 "CMakeFiles/projektAAL.dir/fileManager.cpp.obj" \
-"CMakeFiles/projektAAL.dir/logic2.cpp.obj"
+"CMakeFiles/projektAAL.dir/logic.cpp.obj"
 
 # External object files for target projektAAL
 projektAAL_EXTERNAL_OBJECTS =
@@ -164,9 +164,9 @@ projektAAL.exe: CMakeFiles/projektAAL.dir/main.cpp.obj
 projektAAL.exe: CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj
 projektAAL.exe: CMakeFiles/projektAAL.dir/graph.cpp.obj
 projektAAL.exe: CMakeFiles/projektAAL.dir/interface.cpp.obj
-projektAAL.exe: CMakeFiles/projektAAL.dir/logic.cpp.obj
+projektAAL.exe: CMakeFiles/projektAAL.dir/logic_old.cpp.obj
 projektAAL.exe: CMakeFiles/projektAAL.dir/fileManager.cpp.obj
-projektAAL.exe: CMakeFiles/projektAAL.dir/logic2.cpp.obj
+projektAAL.exe: CMakeFiles/projektAAL.dir/logic.cpp.obj
 projektAAL.exe: CMakeFiles/projektAAL.dir/build.make
 projektAAL.exe: CMakeFiles/projektAAL.dir/linklibs.rsp
 projektAAL.exe: CMakeFiles/projektAAL.dir/objects1.rsp

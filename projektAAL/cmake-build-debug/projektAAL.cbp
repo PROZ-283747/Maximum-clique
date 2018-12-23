@@ -112,10 +112,10 @@
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h">
 			<Option target="projektAAL"/>
 		</Unit>
-		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.cpp">
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic_old.cpp">
 			<Option target="projektAAL"/>
 		</Unit>
-		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h">
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic_old.h">
 			<Option target="projektAAL"/>
 		</Unit>
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/main.cpp">

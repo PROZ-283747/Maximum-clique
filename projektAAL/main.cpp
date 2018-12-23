@@ -10,8 +10,11 @@
 #include <set>
 
 using namespace std;
-
-
+// todo:
+// generowanie grafu ścieżki
+// argument czy brn-Kerbosch czy heurystyka
+// heurystyka
+// <<in >>out
 int main(int argc, char* argv[]){
 
     try

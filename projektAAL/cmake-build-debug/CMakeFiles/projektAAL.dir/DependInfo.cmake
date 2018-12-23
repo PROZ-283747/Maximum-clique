@@ -9,7 +9,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj"
   "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/interface.cpp.obj"
   "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/logic.cpp.obj"
-  "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/logic2.cpp.obj"
+  "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic_old.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/logic_old.cpp.obj"
   "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/main.cpp" "F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/cmake-build-debug/CMakeFiles/projektAAL.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

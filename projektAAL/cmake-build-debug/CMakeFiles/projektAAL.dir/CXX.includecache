@@ -16,11 +16,13 @@ string
 iostream
 -
 
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.cpp
-logic2.h
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.cpp
+cmath
+-
+logic.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
 
-F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic2.h
+F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
 set
 -
 graph.h

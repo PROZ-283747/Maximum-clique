@@ -21,7 +21,7 @@ private:
     int sizeOfBiggestClique;
     FileManager *fileManager;
     vector<int> generateNumbersWithoutRepetition(int number, int upperRange);
-    void saveGraphToFile(string fileName, vector<vector<int>> graph);
+    void saveGraphToFile(string fileName, vector<vector<int>> graph); // todo
     pair<int, int> generateVertice(vector<vector<int>> neighbours);
     bool verticeExists(pair<int, int>,  vector<vector<int>> neighbours);
     bool isElementInVector(vector<int> vector, int element);
@@ -32,9 +32,11 @@ private:
 public:
     GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique);
     GraphGenerator(int numOfNodes);
+    GraphGenerator(int numOfNodes, int pathLength);
     ~GraphGenerator();
     pair<int, vector<vector<int>>> generateGraph();
     pair<int, vector<vector<int>>> generateCompleteGraph();
+    pair<int, vector<vector<int>>> generatePathGraph();
 };
 
 
