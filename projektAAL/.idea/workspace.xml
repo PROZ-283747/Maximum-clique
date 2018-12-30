@@ -53,15 +53,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="24582" />
+          <entry key="cpp" value="24622" />
           <entry key="h" value="3464" />
-          <entry key="txt" value="401" />
+          <entry key="txt" value="416" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="28046" />
-          <entry key="PLAIN_TEXT" value="401" />
+          <entry key="ObjectiveC" value="28086" />
+          <entry key="PLAIN_TEXT" value="416" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -128,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/logic.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+            <state relative-caret-position="-2635">
+              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
               <folding>
                 <element signature="e#44#60#0" expanded="true" />
               </folding>
@@ -359,7 +359,7 @@
       <workItem from="1545346141103" duration="6491000" />
       <workItem from="1545474291447" duration="11978000" />
       <workItem from="1545909970314" duration="1211000" />
-      <workItem from="1546191674568" duration="611000" />
+      <workItem from="1546191674568" duration="913000" />
     </task>
     <task id="LOCAL-00001" summary="Add reading graph from a file.&#10;A lot of unnecessary couts in code.">
       <created>1541953163651</created>
@@ -424,11 +424,18 @@
       <option name="project" value="LOCAL" />
       <updated>1545604395114</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update 30_12_18">
+      <created>1546195791809</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1546195791809</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="376502000" />
+    <option name="totallyTimeSpent" value="376804000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -505,7 +512,8 @@
     <MESSAGE value="Alternative logic2 (std::set instead  of std::vector)" />
     <MESSAGE value="Alternative logic2 (std::set instead  of std::vector). Control commit" />
     <MESSAGE value="Control update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Control update" />
+    <MESSAGE value="Update 30_12_18" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update 30_12_18" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/MinGW/lib/gcc/mingw32/6.3.0/include/c++/bits/allocator.h">
@@ -680,8 +688,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/logic.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="206" column="31" selection-start-line="206" selection-start-column="31" selection-end-line="206" selection-end-column="31" />
+        <state relative-caret-position="-2635">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
           <folding>
             <element signature="e#44#60#0" expanded="true" />
           </folding>
