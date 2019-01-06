@@ -13,9 +13,14 @@ CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.cpp
 CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj: ../graphGenerator.h
 
+CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj: ../graph.h
+CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj: ../heuristicAlg.cpp
+CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj: ../heuristicAlg.h
+
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../fileManager.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../graphGenerator.h
+CMakeFiles/projektAAL.dir/interface.cpp.obj: ../heuristicAlg.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../interface.cpp
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../interface.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj: ../logic.h
@@ -31,6 +36,7 @@ CMakeFiles/projektAAL.dir/logic_old.cpp.obj: ../logic_old.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../fileManager.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../graph.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../graphGenerator.h
+CMakeFiles/projektAAL.dir/main.cpp.obj: ../heuristicAlg.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../interface.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../logic.h
 CMakeFiles/projektAAL.dir/main.cpp.obj: ../main.cpp

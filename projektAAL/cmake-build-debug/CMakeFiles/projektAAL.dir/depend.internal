@@ -13,10 +13,15 @@ CMakeFiles/projektAAL.dir/graphGenerator.cpp.obj
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.cpp
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
+CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj
+ F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
+ F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.cpp
+ F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.h
 CMakeFiles/projektAAL.dir/interface.cpp.obj
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
+ F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.cpp
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
@@ -32,6 +37,7 @@ CMakeFiles/projektAAL.dir/main.cpp.obj
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/fileManager.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graph.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h
+ F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/logic.h
  F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/main.cpp

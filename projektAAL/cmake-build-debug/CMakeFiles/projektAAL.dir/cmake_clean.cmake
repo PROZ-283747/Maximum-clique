@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/projektAAL.dir/logic_old.cpp.obj"
   "CMakeFiles/projektAAL.dir/fileManager.cpp.obj"
   "CMakeFiles/projektAAL.dir/logic.cpp.obj"
+  "CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj"
   "projektAAL.pdb"
   "projektAAL.exe"
   "projektAAL.exe.manifest"

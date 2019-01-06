@@ -1,6 +1,7 @@
-//
-// Created by adell.j on 20.11.2018.
-//
+/* January 2019
+ * Author: Adela Jaworowska / indeks: 283747 / 283747@pw.edu.pl
+ * Project: Finding maximal clique in a graph.
+ */
 
 
 #include <fstream>

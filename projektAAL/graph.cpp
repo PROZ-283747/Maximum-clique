@@ -1,7 +1,8 @@
-/* 11th November 2018
- * Author: Adela Jaworowska
- * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+/* January 2019
+ * Author: Adela Jaworowska / indeks: 283747 / 283747@pw.edu.pl
+ * Project: Finding maximal clique in a graph.
  */
+
 
 #include <regex>
 #include "graph.h"

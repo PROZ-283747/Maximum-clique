@@ -1,6 +1,8 @@
-//
-// Created by adell.j on 07.12.2018.
-//
+/* January 2019
+ * Author: Adela Jaworowska / indeks: 283747 / 283747@pw.edu.pl
+ * Project: Finding maximal clique in a graph.
+ */
+
 
 #ifndef PROJEKTAAL_LOGIC2_H
 #define PROJEKTAAL_LOGIC2_H
@@ -31,8 +33,6 @@ private:
     set<int> P;
     set<int> R;
     set<int> X;
-    int numOfRecursion;
-    int numOfSimpleInstruction;
     void fillInNodesToP(int numOfNodes);
     bool isMaxBigger(set<int> R);
     void setNewMaxClique(set<int> R);

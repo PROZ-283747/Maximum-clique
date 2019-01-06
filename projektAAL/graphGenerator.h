@@ -1,6 +1,8 @@
-//
-// Created by adell.j on 31.10.2018.
-//
+/* January 2019
+ * Author: Adela Jaworowska / indeks: 283747 / 283747@pw.edu.pl
+ * Project: Finding maximal clique in a graph.
+ */
+
 
 #ifndef PROJEKTAAL_GRAPHGENERATOR_H
 #define PROJEKTAAL_GRAPHGENERATOR_H
@@ -19,24 +21,18 @@ private:
     int numberOfNodes;
     int numberOfEdges;
     int sizeOfBiggestClique;
-    FileManager *fileManager;
     vector<int> generateNumbersWithoutRepetition(int number, int upperRange);
-    void saveGraphToFile(string fileName, vector<vector<int>> graph); // todo
-    pair<int, int> generateVertice(vector<vector<int>> neighbours);
-    bool verticeExists(pair<int, int>,  vector<vector<int>> neighbours);
+    pair<int, int> generateEdge(vector<vector<int>> neighbours);
+    bool edgeExists(pair<int, int>,  vector<vector<int>> neighbours);
     bool isElementInVector(vector<int> vector, int element);
     void setCliqueToGraph(vector<int> clique, vector<vector<int>> *neighbours);
-    void setVerticeToGraph(pair<int, int> vertice, vector<vector<int>> *neighbours);
+    void setEdgeToGraph(pair<int, int> vertice, vector<vector<int>> *neighbours);
     void initializeAuxiliaryVector(vector<vector<int>> *neighbours);
 
 public:
     GraphGenerator(int numOfNodes, int numOfEdges, int sizeOfBClique);
-    GraphGenerator(int numOfNodes);
-    GraphGenerator(int numOfNodes, int pathLength);
     ~GraphGenerator();
     pair<int, vector<vector<int>>> generateGraph();
-    pair<int, vector<vector<int>>> generateCompleteGraph();
-    pair<int, vector<vector<int>>> generatePathGraph();
 };
 
 

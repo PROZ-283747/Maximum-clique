@@ -100,6 +100,12 @@
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/graphGenerator.h">
 			<Option target="projektAAL"/>
 		</Unit>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.cpp">
+			<Option target="projektAAL"/>
+		</Unit>
+		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/heuristicAlg.h">
+			<Option target="projektAAL"/>
+		</Unit>
 		<Unit filename="F:/ADELA/STUDIA/SEM_5/AAL/PROJEKT/projektAAL/interface.cpp">
 			<Option target="projektAAL"/>
 		</Unit>

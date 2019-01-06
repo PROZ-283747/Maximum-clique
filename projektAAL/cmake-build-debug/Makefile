@@ -203,6 +203,33 @@ graphGenerator.cpp.s:
 	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/graphGenerator.cpp.s
 .PHONY : graphGenerator.cpp.s
 
+heuristicAlg.obj: heuristicAlg.cpp.obj
+
+.PHONY : heuristicAlg.obj
+
+# target to build an object file
+heuristicAlg.cpp.obj:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/heuristicAlg.cpp.obj
+.PHONY : heuristicAlg.cpp.obj
+
+heuristicAlg.i: heuristicAlg.cpp.i
+
+.PHONY : heuristicAlg.i
+
+# target to preprocess a source file
+heuristicAlg.cpp.i:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/heuristicAlg.cpp.i
+.PHONY : heuristicAlg.cpp.i
+
+heuristicAlg.s: heuristicAlg.cpp.s
+
+.PHONY : heuristicAlg.s
+
+# target to generate assembly for a file
+heuristicAlg.cpp.s:
+	$(MAKE) -f CMakeFiles\projektAAL.dir\build.make CMakeFiles/projektAAL.dir/heuristicAlg.cpp.s
+.PHONY : heuristicAlg.cpp.s
+
 interface.obj: interface.cpp.obj
 
 .PHONY : interface.obj
@@ -329,6 +356,9 @@ help:
 	@echo ... graphGenerator.obj
 	@echo ... graphGenerator.i
 	@echo ... graphGenerator.s
+	@echo ... heuristicAlg.obj
+	@echo ... heuristicAlg.i
+	@echo ... heuristicAlg.s
 	@echo ... interface.obj
 	@echo ... interface.i
 	@echo ... interface.s

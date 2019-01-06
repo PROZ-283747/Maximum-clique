@@ -1,7 +1,8 @@
-/* 11th November 2018
- * Author: Adela Jaworowska
- * Project: Algorithm to find the biggest full subgraph in a graph with n nodes.
+/* January 2019
+ * Author: Adela Jaworowska / indeks: 283747 / 283747@pw.edu.pl
+ * Project: Finding maximal clique in a graph.
  */
+
 
 #include "interface.h"
 #include <fstream>
@@ -10,11 +11,7 @@
 #include <set>
 
 using namespace std;
-// todo:
-// generowanie grafu ścieżki
-// argument czy brn-Kerbosch czy heurystyka
-// heurystyka
-// <<in >>out
+
 int main(int argc, char* argv[]){
 
     try
@@ -22,7 +19,7 @@ int main(int argc, char* argv[]){
         Interface *interface = new Interface();
         interface->menu(argc, argv);
 
-        delete interface;
+        interface->~Interface();
     }
     catch (std::exception const &exc)
     {
